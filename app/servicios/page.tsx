@@ -1,0 +1,26 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Footer, Header, Icon, PageHero, WhatsAppButton } from "@/components/site-shell";
+
+export const metadata: Metadata = { title: "Servicios y comodidades", description: "Desayuno, Wi-Fi, TV HD, aire acondicionado, baño privado y caja de seguridad en Hotel Bermudas, Mar del Plata.", alternates: { canonical: "/servicios" } };
+
+const items = [
+  ["wifi", "Wi-Fi", "Conexión disponible en las habitaciones y espacios comunes."],
+  ["coffee", "Desayuno", "Una propuesta completa para comenzar cada mañana."],
+  ["tv", "TV HD", "Entretenimiento y comodidad dentro de tu habitación."],
+  ["bed", "Sommiers", "Descanso confortable después de disfrutar la ciudad."],
+  ["bath", "Baño privado", "Baños cómodos, funcionales y totalmente renovados."],
+  ["safe", "Caja de seguridad", "Guardá tus pertenencias con mayor tranquilidad."],
+  ["snow", "Aire frío/calor", "La temperatura ideal durante todo el año."],
+] as const;
+
+export default function ServicesPage() {
+  return <><Header overlay /><main id="contenido">
+    <PageHero eyebrow="Una estadía más cómoda" title="Servicios" copy="Cuidamos los detalles esenciales para que solamente tengas que disfrutar." image="/images/IMG_0971.webp" alt="Recepción del Hotel Bermudas" />
+    <section className="services-page section container">
+      <div className="services-page-intro reveal"><p className="eyebrow">Comodidades</p><h2>Todo preparado para recibirte.</h2><p>Nuestro equipo y nuestras instalaciones acompañan cada momento de tu estadía, desde el desayuno hasta el descanso.</p></div>
+      <div className="services-full-grid">{items.map(([icon,title,copy],index) => <article className="service-full-card reveal" key={title}><span className="card-number">0{index+1}</span><Icon name={icon}/><h3>{title}</h3><p>{copy}</p></article>)}</div>
+    </section>
+    <section className="service-story section"><div className="container story-grid"><div className="story-image reveal"><Image src="/images/IMG_0930.webp" alt="Habitación equipada del Hotel Bermudas" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 55vw" unoptimized /></div><div className="story-content reveal"><p className="eyebrow">Calidez Bermudas</p><h2>La atención también es parte del viaje.</h2><p>Somos un hotel familiar y nos importa que cada huésped se sienta acompañado. Por eso ofrecemos atención directa antes, durante y después de la reserva.</p><a className="button button-dark" href="https://wa.me/542236076020" target="_blank" rel="noreferrer">Hablar con el hotel</a></div></div></section>
+  </main><Footer/><WhatsAppButton/></>;
+}
