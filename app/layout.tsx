@@ -47,9 +47,12 @@ export const metadata: Metadata = {
     images: ["/images/fachada-hotel-bermudas-la-perla.webp"],
   },
   icons: {
-    icon: [{ url: "/favicon-bermudas.svg", type: "image/svg+xml", sizes: "any" }],
-    shortcut: "/favicon-bermudas.svg",
-    apple: "/images/logo-bermudas.webp",
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+      { url: "/favicon-bermudas.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
   },
   verification: process.env.GOOGLE_SITE_VERIFICATION
     ? { google: process.env.GOOGLE_SITE_VERIFICATION }

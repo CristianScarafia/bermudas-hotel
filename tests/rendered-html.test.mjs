@@ -26,7 +26,8 @@ test("renders production SEO metadata and structured data", async () => {
   assert.match(html, /<link[^>]+rel=["']canonical["'][^>]+bermudashotel\.com/i);
   assert.match(html, /"@type":"Hotel"/);
   assert.match(html, /"@type":"WebSite"/);
-  assert.match(html, /favicon-bermudas\.svg/);
+  assert.match(html, /favicon-bermudas\.png/);
+  assert.match(html, /apple-touch-icon\.png/);
   assert.match(html, /href="\/hotel-en-la-perla"/);
 });
 
