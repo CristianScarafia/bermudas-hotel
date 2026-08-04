@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Footer, Header, Icon, WhatsAppButton } from "@/components/site-shell";
+import { SvgIcon } from "@/components/icons";
 
 const services = [
   ["wifi", "Wi-Fi en habitaciones", "Conectividad en todos los espacios"],
@@ -49,9 +50,9 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="https://wa.me/542236076020?text=Hola%20Hotel%20Bermudas%2C%20quisiera%20consultar%20disponibilidad" target="_blank" rel="noreferrer">
-                Consultar disponibilidad <span aria-hidden="true">↗</span>
+                Consultar disponibilidad <SvgIcon name="arrow-up-right" />
               </a>
-              <Link className="text-link light-link" href="/habitaciones">Conocer habitaciones <span aria-hidden="true">→</span></Link>
+              <Link className="text-link light-link" href="/habitaciones">Conocer habitaciones <SvgIcon name="arrow-right" /></Link>
             </div>
           </div>
           <div className="hero-facts" aria-label="Información destacada">
@@ -72,7 +73,7 @@ export default function Home() {
             <p>
               Una ubicación estratégica para vivir la playa, el centro y la gastronomía de la ciudad sin resignar tranquilidad. En Bermudas combinamos comodidad, cercanía y atención personalizada.
             </p>
-            <Link className="text-link" href="/ubicacion">Descubrir la ubicación <span aria-hidden="true">→</span></Link>
+            <Link className="text-link" href="/ubicacion">Descubrir la ubicación <SvgIcon name="arrow-right" /></Link>
           </div>
         </section>
 
@@ -106,7 +107,7 @@ export default function Home() {
               <p className="eyebrow">Todo lo esencial</p>
               <h2>Servicios para disfrutar sin preocupaciones.</h2>
             </div>
-            <Link className="text-link desktop-link" href="/servicios">Todos los servicios <span aria-hidden="true">→</span></Link>
+            <Link className="text-link desktop-link" href="/servicios">Todos los servicios <SvgIcon name="arrow-right" /></Link>
           </div>
           <div className="service-grid">
             {services.map(([icon, title, copy], index) => (

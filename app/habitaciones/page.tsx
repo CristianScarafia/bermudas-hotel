@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Footer, Header, Icon, PageHero, WhatsAppButton } from "@/components/site-shell";
+import { SvgIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Habitaciones dobles, triples y cuádruples",
@@ -26,7 +27,7 @@ export default function RoomsPage() {
       <PageHero eyebrow="Descansá a tu manera" title="Habitaciones" copy="Espacios renovados, cómodos y funcionales para parejas, familias y grupos." image="/images/IMG_0936.webp" alt="Habitación del Hotel Bermudas en Mar del Plata" />
       <section className="room-intro section container reveal">
         <div><p className="eyebrow">20 habitaciones</p><h2>Todo lo que necesitás para descansar bien.</h2></div>
-        <div><p>Podés elegir habitaciones dobles, triples o cuádruples. Todas ofrecen las mismas comodidades y baños totalmente renovados, con una propuesta simple, cálida y confortable.</p><a className="text-link" href="https://wa.me/542236076020?text=Hola%2C%20quisiera%20saber%20qué%20habitación%20tienen%20disponible" target="_blank" rel="noreferrer">Consultar la opción ideal <span>↗</span></a></div>
+        <div><p>Podés elegir habitaciones dobles, triples o cuádruples. Todas ofrecen las mismas comodidades y baños totalmente renovados, con una propuesta simple, cálida y confortable.</p><a className="text-link" href="https://wa.me/542236076020?text=Hola%2C%20quisiera%20saber%20qué%20habitación%20tienen%20disponible" target="_blank" rel="noreferrer">Consultar la opción ideal <SvgIcon name="arrow-up-right" /></a></div>
       </section>
       <section className="room-features container" aria-label="Comodidades de las habitaciones">
         {[['bed','Sommiers confortables'],['wifi','Wi-Fi'],['tv','TV HD'],['snow','Aire frío/calor'],['safe','Caja de seguridad'],['bath','Baño privado']].map(([icon,label]) => <div className="room-feature reveal" key={label}><Icon name={icon} /><span>{label}</span></div>)}
