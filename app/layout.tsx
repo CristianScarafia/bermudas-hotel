@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@/components/analytics";
 import "./globals.css";
 
 const siteUrl = "https://bermudashotel.com";
@@ -46,10 +47,12 @@ export const metadata: Metadata = {
     images: ["/images/IMG_0947.webp"],
   },
   icons: {
-    icon: "/images/logo-bermudas.webp",
+    icon: "/favicon.svg",
     apple: "/images/logo-bermudas.webp",
   },
-  other: { "codex-preview": "development" },
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {
@@ -61,6 +64,7 @@ export const viewport: Viewport = {
 const hotelSchema = {
   "@context": "https://schema.org",
   "@type": "Hotel",
+  "@id": `${siteUrl}/#hotel`,
   name: "Hotel Bermudas",
   url: siteUrl,
   telephone: "+54 223 607-6020",
@@ -74,6 +78,8 @@ const hotelSchema = {
     "Hotel familiar en La Perla, Mar del Plata, a 100 metros del mar y a 300 metros de la peatonal.",
   numberOfRooms: 20,
   priceRange: "$$",
+  currenciesAccepted: "ARS",
+  availableLanguage: ["es"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "3 de Febrero 2484",
@@ -93,6 +99,21 @@ const hotelSchema = {
     { "@type": "LocationFeatureSpecification", name: "Aire acondicionado", value: true },
     { "@type": "LocationFeatureSpecification", name: "Baño privado", value: true },
   ],
+  containsPlace: [
+    { "@type": "HotelRoom", name: "Habitación doble", occupancy: { "@type": "QuantitativeValue", maxValue: 2 } },
+    { "@type": "HotelRoom", name: "Habitación triple", occupancy: { "@type": "QuantitativeValue", maxValue: 3 } },
+    { "@type": "HotelRoom", name: "Habitación cuádruple", occupancy: { "@type": "QuantitativeValue", maxValue: 4 } },
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  url: siteUrl,
+  name: "Hotel Bermudas",
+  inLanguage: "es-AR",
+  publisher: { "@id": `${siteUrl}/#hotel` },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -105,6 +126,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(hotelSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <Analytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       </body>
     </html>
   );
