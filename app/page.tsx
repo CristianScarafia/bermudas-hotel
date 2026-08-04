@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Footer, Header, Icon, WhatsAppButton } from "@/components/site-shell";
 import { SvgIcon } from "@/components/icons";
 import { ResponsiveImage } from "@/components/responsive-image";
+import { FaqSection, RelatedLinks } from "@/components/content-sections";
+import { generalFaqs } from "@/lib/hotel-content";
 
 const services = [
   ["wifi", "Wi-Fi en habitaciones", "Conectividad en todos los espacios"],
@@ -34,7 +36,7 @@ export default function Home() {
         <section className="hero" aria-labelledby="hero-title">
           <ResponsiveImage
             className="hero-image"
-            src="/images/IMG_0947.webp"
+            src="/images/fachada-hotel-bermudas-la-perla.webp"
             alt="Fachada del Hotel Bermudas en La Perla, Mar del Plata"
             width={1800}
             height={1350}
@@ -80,7 +82,7 @@ export default function Home() {
         <section className="editorial section">
           <div className="editorial-grid container">
             <div className="editorial-image editorial-large reveal">
-              <Image src="/images/IMG_0930.webp" alt="Habitación matrimonial renovada del Hotel Bermudas" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" unoptimized />
+              <Image src="/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp" alt="Habitación doble matrimonial renovada del Hotel Bermudas en Mar del Plata" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" unoptimized />
               <span className="image-tag">Confort renovado</span>
             </div>
             <div className="editorial-content reveal">
@@ -121,8 +123,14 @@ export default function Home() {
           </div>
         </section>
 
+        <RelatedLinks title="Una estadía para cada viaje" links={[
+          { href: "/hotel-en-la-perla", eyebrow: "A 100 m del mar", title: "Hotel en La Perla", copy: "Conocé por qué la ubicación facilita cada día del viaje." },
+          { href: "/alojamiento-familiar", eyebrow: "Hasta cuatro huéspedes", title: "Viajes en familia", copy: "Habitaciones y consejos para organizar una estadía compartida." },
+          { href: "/guias", eyebrow: "Ideas locales", title: "Guías de Mar del Plata", copy: "Recorridos originales para disfrutar la costa y el centro.", event: "view_local_guide" },
+        ]} />
+
         <section className="location-banner">
-          <ResponsiveImage src="/images/mar-del-plata.webp" alt="Costa de Mar del Plata cerca del Hotel Bermudas" width={1000} height={750} sizes="100vw" />
+          <ResponsiveImage src="/images/costa-la-perla-mar-del-plata.webp" alt="Costa de La Perla en Mar del Plata cerca del Hotel Bermudas" width={1000} height={750} sizes="100vw" />
           <div className="location-overlay" />
           <div className="location-content container reveal">
             <p className="eyebrow light">Una ubicación privilegiada</p>
@@ -149,8 +157,10 @@ export default function Home() {
           </div>
         </section>
 
+        <FaqSection faqs={generalFaqs.slice(0, 5)} title="Preguntas para planificar tu estadía" />
+
         <section className="final-cta">
-          <ResponsiveImage src="/images/IMG_0971.webp" alt="Recepción del Hotel Bermudas" width={1800} height={1350} sizes="100vw" />
+          <ResponsiveImage src="/images/recepcion-hotel-bermudas-mar-del-plata.webp" alt="Recepción del Hotel Bermudas en Mar del Plata" width={1800} height={1350} sizes="100vw" />
           <div className="final-cta-overlay" />
           <div className="final-cta-content reveal">
             <Image src="/images/logo-bermudas.webp" alt="" width={130} height={130} unoptimized />

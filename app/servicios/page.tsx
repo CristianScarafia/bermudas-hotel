@@ -16,7 +16,7 @@ const items = [
 
 export default function ServicesPage() {
   return <><Header overlay /><main id="contenido">
-    <PageHero eyebrow="Una estadía más cómoda" title="Servicios" copy="Cuidamos los detalles esenciales para que solamente tengas que disfrutar." image="/images/IMG_0971.webp" alt="Recepción del Hotel Bermudas" />
+    <PageHero eyebrow="Una estadía más cómoda" title="Servicios" copy="Cuidamos los detalles esenciales para que solamente tengas que disfrutar." image="/images/recepcion-hotel-bermudas-mar-del-plata.webp" alt="Recepción del Hotel Bermudas en Mar del Plata" />
     <section className="services-page section container">
       <div className="services-page-intro reveal"><p className="eyebrow">Comodidades</p><h2>Todo preparado para recibirte.</h2><p>Nuestro equipo y nuestras instalaciones acompañan cada momento de tu estadía, desde el desayuno hasta el descanso.</p></div>
       <div className="services-full-grid">{items.map(([icon,title,copy],index) => <article className="service-full-card reveal" key={title}><span className="card-number">0{index+1}</span><Icon name={icon}/><h3>{title}</h3><p>{copy}</p></article>)}</div>

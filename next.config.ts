@@ -17,8 +17,8 @@ const nextConfig: NextConfig = {
       },
       { source: "/tienda", destination: "/", permanent: true },
       { source: "/tienda/:path*", destination: "/", permanent: true },
-      { source: "/contingentes", destination: "/contacto", permanent: true },
-      { source: "/contingentes/:path*", destination: "/contacto", permanent: true },
+      { source: "/contingentes", destination: "/grupos-y-contingentes", permanent: true },
+      { source: "/contingentes/:path*", destination: "/grupos-y-contingentes", permanent: true },
     ];
   },
   async headers() {

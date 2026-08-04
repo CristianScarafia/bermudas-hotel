@@ -7,6 +7,7 @@ const nav = [
   { href: "/habitaciones", label: "Habitaciones" },
   { href: "/servicios", label: "Servicios" },
   { href: "/ubicacion", label: "Ubicación" },
+  { href: "/preguntas-frecuentes", label: "Preguntas" },
   { href: "/contacto", label: "Contacto" },
 ];
 
@@ -42,9 +43,10 @@ export function Footer() {
           <Image src="/images/logo-bermudas.webp" alt="Hotel Bermudas" width={130} height={130} unoptimized />
           <p>Hospitalidad, comodidad y cercanía para disfrutar Mar del Plata.</p>
         </div>
-        <div className="footer-column"><h2>Explorar</h2>{nav.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}</div>
-        <div className="footer-column"><h2>Contacto</h2><a href="tel:+542236076020">+54 223 607-6020</a><a href="mailto:bermudashotel@hotmail.com">bermudashotel@hotmail.com</a><a href="https://maps.google.com/?q=3+de+Febrero+2484+Mar+del+Plata" target="_blank" rel="noreferrer">3 de Febrero 2484<br />Mar del Plata, Argentina</a></div>
-        <div className="footer-column footer-reserve"><h2>Reservas</h2><p>Consultá disponibilidad y obtené atención personalizada.</p><a className="text-link light-link" href="https://wa.me/542236076020" target="_blank" rel="noreferrer">Escribir por WhatsApp <SvgIcon name="arrow-up-right" /></a></div>
+        <div className="footer-column"><h2>El hotel</h2><Link href="/hotel-en-la-perla">Hotel en La Perla</Link><Link href="/habitaciones">Habitaciones</Link><Link href="/servicios">Servicios</Link><Link href="/ubicacion">Ubicación</Link></div>
+        <div className="footer-column"><h2>Alojarse</h2><Link href="/alojamiento-familiar">Familias</Link><Link href="/grupos-y-contingentes">Grupos y contingentes</Link><Link href="/informacion-del-huesped">Información del huésped</Link><Link href="/preguntas-frecuentes">Preguntas frecuentes</Link></div>
+        <div className="footer-column"><h2>Guías locales</h2><Link href="/guias/la-perla-a-pie">La Perla a pie</Link><Link href="/guias/playas-cerca-del-hotel">Playas cercanas</Link><Link href="/guias/centro-de-mar-del-plata">Centro de Mar del Plata</Link></div>
+        <div className="footer-column"><h2>Contacto</h2><a href="tel:+542236076020">+54 223 607-6020</a><a href="mailto:bermudashotel@hotmail.com">bermudashotel@hotmail.com</a><a href="https://maps.google.com/?q=3+de+Febrero+2484+Mar+del+Plata" target="_blank" rel="noreferrer">3 de Febrero 2484<br />Mar del Plata, Argentina</a><a className="text-link light-link" href="https://wa.me/542236076020" target="_blank" rel="noreferrer">WhatsApp <SvgIcon name="arrow-up-right" /></a></div>
       </div>
       <div className="footer-bottom container"><span>© {new Date().getFullYear()} Hotel Bermudas</span><span>Mar del Plata · Buenos Aires</span></div>
     </footer>
@@ -60,9 +62,10 @@ export function Icon({ name }: { name: IconName }) {
 }
 
 export function PageHero({ eyebrow, title, copy, image, alt }: { eyebrow: string; title: string; copy: string; image: string; alt: string }) {
+  const isCoastImage = image === "/images/mar-del-plata.webp" || image.includes("costa-la-perla");
   return (
     <section className="page-hero">
-      <ResponsiveImage src={image} alt={alt} width={image.includes("mar-del-plata") ? 1000 : 1800} height={image.includes("mar-del-plata") ? 750 : 1350} sizes="100vw" priority />
+      <ResponsiveImage src={image} alt={alt} width={isCoastImage ? 1000 : 1800} height={isCoastImage ? 750 : 1350} sizes="100vw" priority />
       <div className="page-hero-overlay" />
       <div className="page-hero-content container"><p className="eyebrow light">{eyebrow}</p><h1>{title}</h1><p>{copy}</p></div>
     </section>
