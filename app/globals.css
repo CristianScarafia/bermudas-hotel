@@ -220,9 +220,101 @@ h2 { font-size: clamp(42px, 5.6vw, 78px); }
 .contact-image::after { content: ""; position: absolute; inset: 0; background: rgba(5,29,34,.65); }
 .contact-image > div { position: relative; z-index: 2; }
 
+/* SEO content, rooms and guides */
+.breadcrumbs { display: flex; align-items: center; gap: 10px; min-height: 62px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.breadcrumbs > span { display: flex; align-items: center; gap: 10px; }
+.breadcrumbs b { color: var(--gold); font-weight: 400; }
+.breadcrumbs a:hover { color: var(--ink); }
+
+.room-types { padding-bottom: clamp(90px, 10vw, 140px); }
+.room-type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.room-type-card { overflow: hidden; border: 1px solid var(--line); background: white; }
+.room-type-card > img { width: 100%; height: 300px; object-fit: cover; transition: transform .7s; }
+.room-type-card:hover > img { transform: scale(1.025); }
+.room-type-card > div { padding: 28px; }
+.room-type-card span, .related-card > span { color: #88714b; font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.room-type-card h3, .related-card h3, .policy-card h3 { margin: 10px 0; font-family: var(--serif); font-size: 28px; font-weight: 400; line-height: 1.15; }
+.room-type-card p, .related-card p, .policy-card p { color: var(--muted); font-size: 14px; }
+.room-type-card a, .related-card b { display: inline-flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.room-type-card a svg, .related-card b svg { width: 15px; height: 15px; transition: transform .25s; }
+.room-type-card a:hover svg, .related-card:hover b svg { transform: translateX(5px); }
+
+.room-detail-intro, .seo-lead { display: grid; grid-template-columns: 1fr .8fr; gap: 100px; align-items: start; }
+.room-detail-intro h2, .seo-lead h2 { margin: 0; }
+.room-detail-copy, .seo-lead > div:last-child { padding-top: 38px; color: var(--muted); font-size: 18px; }
+.room-detail-copy dl { margin: 36px 0 0; border-top: 1px solid var(--line); }
+.room-detail-copy dl > div { display: grid; grid-template-columns: 130px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.room-detail-copy dt { color: var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.room-detail-copy dd { margin: 0; font-size: 14px; }
+.room-gallery { background: var(--sand); max-width: none; width: 100%; padding-inline: max(24px, calc((100vw - 1180px) / 2)); }
+.room-gallery-grid { display: grid; grid-template-columns: 1.45fr .75fr; grid-template-rows: repeat(2, 310px); gap: 22px; }
+.room-gallery-grid figure { margin: 0; overflow: hidden; }
+.room-gallery-grid .gallery-1 { grid-row: span 2; }
+.room-gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s; }
+.room-gallery-grid figure:hover img { transform: scale(1.035); }
+.room-gallery-note { max-width: 720px; margin: 22px 0 0; color: var(--muted); font-size: 12px; }
+
+.faq-section { background: var(--sand); }
+.faq-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: 90px; }
+.faq-heading { align-self: start; position: sticky; top: 40px; }
+.faq-heading h2 { font-size: clamp(45px, 5vw, 68px); }
+.faq-heading > p:last-child { color: var(--muted); }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 27px 0; cursor: pointer; list-style: none; font-family: var(--serif); font-size: clamp(20px, 2vw, 27px); line-height: 1.25; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary b { display: grid; place-items: center; width: 32px; height: 32px; flex: none; border: 1px solid var(--line); border-radius: 50%; color: var(--gold); font-family: var(--sans); font-size: 18px; font-weight: 400; transition: transform .25s; }
+.faq-item[open] summary b { transform: rotate(45deg); }
+.faq-item p { max-width: 730px; padding: 0 55px 25px 0; color: var(--muted); }
+
+.related-section { overflow: hidden; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.related-card { min-height: 300px; padding: 34px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .3s, color .3s, transform .3s; }
+.related-card:hover { background: var(--ink); color: white; transform: translateY(-7px); }
+.related-card h3 { margin-top: 42px; font-size: 30px; }
+.related-card:hover p { color: rgba(255,255,255,.68); }
+.related-card b { margin-top: 28px; }
+
+.value-strip { display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: clamp(80px, 10vw, 140px); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.value-strip article { min-height: 260px; padding: 36px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.value-strip strong { color: var(--gold); font-family: var(--serif); font-size: 34px; font-weight: 400; }
+.value-strip h3 { margin: 45px 0 5px; font-family: var(--serif); font-size: 26px; font-weight: 400; }
+.value-strip p { color: var(--muted); font-size: 13px; }
+
+.family-needs, .group-process { background: var(--sand); }
+.guest-info { display: grid; grid-template-columns: .58fr 1.42fr; gap: 85px; }
+.guest-info-heading { position: sticky; top: 40px; align-self: start; }
+.guest-info-heading h2 { font-size: clamp(45px, 5vw, 68px); }
+.guest-info-heading > p:last-child { color: var(--muted); }
+.policy-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.policy-card { min-height: 275px; padding: 34px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.policy-card > span { color: var(--gold); font-family: var(--serif); font-size: 13px; }
+.policy-card h3 { margin-top: 50px; }
+.accuracy-note { padding: 38px 0; background: var(--ink); color: white; }
+.accuracy-note > div { display: grid; grid-template-columns: 180px 1fr; gap: 40px; align-items: start; }
+.accuracy-note strong { color: var(--gold); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.accuracy-note p { max-width: 780px; margin: 0; color: rgba(255,255,255,.72); }
+
+.guide-article { padding-top: 80px; }
+.guide-lead { max-width: 900px; margin: 0 auto clamp(70px, 9vw, 120px); text-align: center; }
+.guide-lead > p:last-child { font-family: var(--serif); font-size: clamp(25px, 3vw, 38px); line-height: 1.45; }
+.guide-body { max-width: 920px; margin: 0 auto; }
+.guide-section { display: grid; grid-template-columns: 70px 1fr; gap: 30px; padding: 55px 0; border-top: 1px solid var(--line); }
+.guide-section > span { padding-top: 12px; color: var(--gold); font-family: var(--serif); font-size: 13px; }
+.guide-section h2 { font-size: clamp(38px, 4.5vw, 60px); }
+.guide-section p { color: var(--muted); font-size: 17px; }
+.guide-section ul { margin: 28px 0 0; padding: 0; list-style: none; }
+.guide-section li { padding: 11px 0; border-bottom: 1px solid var(--line); color: var(--ink); }
+.guide-section li::before { content: "·"; margin-right: 12px; color: var(--gold); }
+.guide-hotel-card { display: grid; grid-template-columns: 1fr 1fr; margin-top: 90px; background: var(--sand); }
+.guide-hotel-card > img { width: 100%; height: 100%; min-height: 480px; object-fit: cover; }
+.guide-hotel-card > div { align-self: center; padding: clamp(40px, 6vw, 80px); }
+.guide-hotel-card h2 { font-size: clamp(42px, 5vw, 64px); }
+.guide-hotel-card p:not(.eyebrow) { margin-bottom: 32px; color: var(--muted); }
+
 /* Footer */
 .footer { background: var(--ink-deep); color: white; }
-.footer-main { display: grid; grid-template-columns: 1.3fr .7fr 1fr 1.2fr; gap: 60px; padding-block: 85px 70px; }
+.footer-main { display: grid; grid-template-columns: 1.15fr repeat(4, 1fr); gap: 45px; padding-block: 85px 70px; }
 .footer-brand img { width: 110px; height: 110px; object-fit: contain; margin-bottom: 20px; }
 .footer-brand p, .footer-column p { color: rgba(255,255,255,.58); font-size: 13px; }
 .footer-brand p { max-width: 260px; }
@@ -264,8 +356,18 @@ h2 { font-size: clamp(42px, 5.6vw, 78px); }
   .room-feature:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
   .services-page, .contact-section { grid-template-columns: 1fr; }
   .services-page-intro { position: static; }
+  .room-type-grid { grid-template-columns: 1fr 1fr; }
+  .room-type-card:last-child { grid-column: span 2; }
+  .room-detail-intro, .seo-lead { grid-template-columns: 1fr; gap: 25px; }
+  .room-detail-copy, .seo-lead > div:last-child { padding-top: 0; }
+  .faq-layout, .guest-info { grid-template-columns: 1fr; gap: 50px; }
+  .faq-heading, .guest-info-heading { position: static; }
+  .related-grid { grid-template-columns: 1fr 1fr; }
+  .related-card:last-child { grid-column: span 2; }
+  .guide-hotel-card { grid-template-columns: 1fr; }
+  .guide-hotel-card > img { min-height: 420px; }
   .footer-main { grid-template-columns: 1.2fr 1fr 1fr; }
-  .footer-reserve { grid-column: span 3; }
+  .footer-brand { grid-column: span 3; }
 }
 
 @media (max-width: 720px) {
@@ -314,6 +416,24 @@ h2 { font-size: clamp(42px, 5.6vw, 78px); }
   .room-feature:nth-child(odd) { border-right: 1px solid var(--line); }
   .room-feature:nth-child(even) { border-right: 0; }
   .photo-item, .photo-item:nth-child(4n+1), .photo-item:nth-child(4n+4) { grid-column: span 12; height: 320px; }
+  .room-type-grid { grid-template-columns: 1fr; }
+  .room-type-card:last-child { grid-column: auto; }
+  .room-type-card > img { height: 270px; }
+  .room-gallery-grid { grid-template-columns: 1fr; grid-template-rows: 360px 260px 260px; }
+  .room-gallery-grid .gallery-1 { grid-row: auto; }
+  .room-detail-copy dl > div { grid-template-columns: 1fr; gap: 5px; }
+  .faq-item summary { padding: 22px 0; }
+  .faq-item p { padding-right: 0; }
+  .related-grid { grid-template-columns: 1fr; }
+  .related-card, .related-card:last-child { grid-column: auto; min-height: 250px; }
+  .value-strip { grid-template-columns: 1fr; }
+  .value-strip article { min-height: 220px; }
+  .policy-grid { grid-template-columns: 1fr; }
+  .accuracy-note > div { grid-template-columns: 1fr; gap: 12px; }
+  .guide-section { grid-template-columns: 1fr; gap: 6px; padding: 42px 0; }
+  .guide-section > span { padding: 0; }
+  .guide-hotel-card > img { min-height: 300px; }
+  .guide-hotel-card > div { padding: 38px 28px; }
   .services-full-grid { grid-template-columns: 1fr; }
   .service-full-card:nth-child(7) { grid-column: auto; }
   .story-grid { grid-template-columns: 1fr; gap: 45px; }
@@ -326,7 +446,7 @@ h2 { font-size: clamp(42px, 5.6vw, 78px); }
   .contact-row { grid-template-columns: 30px 1fr 20px; }
   .contact-image { height: 520px; }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 45px 25px; }
-  .footer-brand, .footer-reserve { grid-column: span 2; }
+  .footer-brand { grid-column: span 2; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 5px; }
   .whatsapp { right: 14px; bottom: 14px; }
   .whatsapp span { display: none; }

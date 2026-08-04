@@ -14,7 +14,7 @@ export default function ContactPage() {
   ];
 
   return <><Header overlay/><main id="contenido">
-    <PageHero eyebrow="Hablemos" title="Tu estadía empieza acá" copy="Consultá fechas, habitaciones y disponibilidad directamente con nuestro equipo." image="/images/IMG_0947.webp" alt="Entrada del Hotel Bermudas en Mar del Plata" />
+    <PageHero eyebrow="Hablemos" title="Tu estadía empieza acá" copy="Consultá fechas, habitaciones y disponibilidad directamente con nuestro equipo." image="/images/fachada-hotel-bermudas-la-perla.webp" alt="Entrada del Hotel Bermudas en La Perla, Mar del Plata" />
     <section className="contact-section section container">
       <div className="contact-heading reveal"><p className="eyebrow">Contacto directo</p><h2>Estamos para ayudarte a planificar tu viaje.</h2><p>Para obtener atención personalizada y consultar la mejor opción disponible, comunicate por cualquiera de nuestros canales.</p></div>
       <div className="contact-list">

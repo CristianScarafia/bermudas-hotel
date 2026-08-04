@@ -11,6 +11,7 @@ declare global {
 }
 
 function conversionEvent(anchor: HTMLAnchorElement) {
+  if (anchor.dataset.analyticsEvent) return anchor.dataset.analyticsEvent;
   const href = anchor.href;
   if (href.includes("wa.me/")) return "click_whatsapp";
   if (href.startsWith("tel:")) return "click_phone";

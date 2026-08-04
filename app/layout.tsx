@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Descansá a pasos del mar, con habitaciones renovadas y la calidez de una atención personalizada.",
     images: [
       {
-        url: "/images/IMG_0947.webp",
+        url: "/images/fachada-hotel-bermudas-la-perla.webp",
         width: 1800,
         height: 1350,
         alt: "Fachada del Hotel Bermudas en el barrio La Perla de Mar del Plata",
@@ -44,10 +44,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hotel Bermudas | Mar del Plata",
     description: "Tu lugar a pasos del mar, en el corazón de La Perla.",
-    images: ["/images/IMG_0947.webp"],
+    images: ["/images/fachada-hotel-bermudas-la-perla.webp"],
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: [{ url: "/favicon-bermudas.svg", type: "image/svg+xml", sizes: "any" }],
+    shortcut: "/favicon-bermudas.svg",
     apple: "/images/logo-bermudas.webp",
   },
   verification: process.env.GOOGLE_SITE_VERIFICATION
@@ -70,9 +71,9 @@ const hotelSchema = {
   telephone: "+54 223 607-6020",
   email: "bermudashotel@hotmail.com",
   image: [
-    `${siteUrl}/images/IMG_0947.webp`,
-    `${siteUrl}/images/IMG_0930.webp`,
-    `${siteUrl}/images/IMG_0936.webp`,
+    `${siteUrl}/images/fachada-hotel-bermudas-la-perla.webp`,
+    `${siteUrl}/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp`,
+    `${siteUrl}/images/habitacion-triple-hotel-bermudas-la-perla.webp`,
   ],
   description:
     "Hotel familiar en La Perla, Mar del Plata, a 100 metros del mar y a 300 metros de la peatonal.",
@@ -100,9 +101,9 @@ const hotelSchema = {
     { "@type": "LocationFeatureSpecification", name: "Baño privado", value: true },
   ],
   containsPlace: [
-    { "@type": "HotelRoom", name: "Habitación doble", occupancy: { "@type": "QuantitativeValue", maxValue: 2 } },
-    { "@type": "HotelRoom", name: "Habitación triple", occupancy: { "@type": "QuantitativeValue", maxValue: 3 } },
-    { "@type": "HotelRoom", name: "Habitación cuádruple", occupancy: { "@type": "QuantitativeValue", maxValue: 4 } },
+    { "@type": "HotelRoom", "@id": `${siteUrl}/habitaciones/doble#habitacion`, name: "Habitación doble", url: `${siteUrl}/habitaciones/doble`, occupancy: { "@type": "QuantitativeValue", maxValue: 2 } },
+    { "@type": "HotelRoom", "@id": `${siteUrl}/habitaciones/triple#habitacion`, name: "Habitación triple", url: `${siteUrl}/habitaciones/triple`, occupancy: { "@type": "QuantitativeValue", maxValue: 3 } },
+    { "@type": "HotelRoom", "@id": `${siteUrl}/habitaciones/cuadruple#habitacion`, name: "Habitación cuádruple", url: `${siteUrl}/habitaciones/cuadruple`, occupancy: { "@type": "QuantitativeValue", maxValue: 4 } },
   ],
 };
 
