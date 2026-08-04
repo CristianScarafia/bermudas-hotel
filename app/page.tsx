@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Footer, Header, Icon, WhatsAppButton } from "@/components/site-shell";
 import { SvgIcon } from "@/components/icons";
+import { ResponsiveImage } from "@/components/responsive-image";
 
 const services = [
   ["wifi", "Wi-Fi en habitaciones", "Conectividad en todos los espacios"],
@@ -31,7 +32,7 @@ export default function Home() {
       <Header overlay />
       <main id="contenido">
         <section className="hero" aria-labelledby="hero-title">
-          <Image
+          <ResponsiveImage
             className="hero-image"
             src="/images/IMG_0947.webp"
             alt="Fachada del Hotel Bermudas en La Perla, Mar del Plata"
@@ -39,7 +40,6 @@ export default function Home() {
             height={1350}
             sizes="100vw"
             priority
-            unoptimized
           />
           <div className="hero-shade" />
           <div className="hero-content container">
@@ -122,7 +122,7 @@ export default function Home() {
         </section>
 
         <section className="location-banner">
-          <Image src="/images/mar-del-plata.webp" alt="Costa de Mar del Plata cerca del Hotel Bermudas" width={1000} height={750} sizes="100vw" unoptimized />
+          <ResponsiveImage src="/images/mar-del-plata.webp" alt="Costa de Mar del Plata cerca del Hotel Bermudas" width={1000} height={750} sizes="100vw" />
           <div className="location-overlay" />
           <div className="location-content container reveal">
             <p className="eyebrow light">Una ubicación privilegiada</p>
@@ -150,7 +150,7 @@ export default function Home() {
         </section>
 
         <section className="final-cta">
-          <Image src="/images/IMG_0971.webp" alt="Recepción del Hotel Bermudas" width={1800} height={1350} sizes="100vw" unoptimized />
+          <ResponsiveImage src="/images/IMG_0971.webp" alt="Recepción del Hotel Bermudas" width={1800} height={1350} sizes="100vw" />
           <div className="final-cta-overlay" />
           <div className="final-cta-content reveal">
             <Image src="/images/logo-bermudas.webp" alt="" width={130} height={130} unoptimized />

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SvgIcon, type IconName } from "@/components/icons";
+import { ResponsiveImage } from "@/components/responsive-image";
 
 const nav = [
   { href: "/habitaciones", label: "Habitaciones" },
@@ -61,7 +62,7 @@ export function Icon({ name }: { name: IconName }) {
 export function PageHero({ eyebrow, title, copy, image, alt }: { eyebrow: string; title: string; copy: string; image: string; alt: string }) {
   return (
     <section className="page-hero">
-      <Image src={image} alt={alt} width={1800} height={1350} sizes="100vw" priority unoptimized />
+      <ResponsiveImage src={image} alt={alt} width={image.includes("mar-del-plata") ? 1000 : 1800} height={image.includes("mar-del-plata") ? 750 : 1350} sizes="100vw" priority />
       <div className="page-hero-overlay" />
       <div className="page-hero-content container"><p className="eyebrow light">{eyebrow}</p><h1>{title}</h1><p>{copy}</p></div>
     </section>
