@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
+import { PhotoLightbox } from "@/components/photo-lightbox";
 import "./globals.css";
 
 const siteUrl = "https://bermudashotel.com";
@@ -134,6 +135,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <PhotoLightbox />
         <Analytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       </body>
     </html>

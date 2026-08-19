@@ -107,6 +107,16 @@ h2 { font-size: clamp(42px, 5.6vw, 78px); }
 .feature-list li { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
 .feature-list li::before { content: "·"; margin-right: 10px; color: var(--gold); }
 
+main img[data-lightbox-enabled="true"] { cursor: zoom-in; }
+.photo-lightbox { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 34px; background: rgba(4,18,21,.94); backdrop-filter: blur(12px); animation: lightboxFade .2s ease-out both; }
+.photo-lightbox-frame { display: grid; justify-items: center; gap: 14px; max-width: 100%; max-height: 100%; margin: 0; }
+.photo-lightbox-frame img { display: block; width: auto; max-width: min(94vw, 1600px); height: auto; max-height: calc(92vh - 76px); object-fit: contain; box-shadow: 0 24px 80px rgba(0,0,0,.4); }
+.photo-lightbox-frame figcaption { max-width: min(90vw, 900px); color: rgba(255,255,255,.78); font-family: var(--serif); font-size: 15px; text-align: center; }
+.photo-lightbox-close { position: fixed; top: 22px; right: 24px; z-index: 2; display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; background: rgba(4,18,21,.45); color: white; cursor: pointer; transition: background .2s, transform .2s; }
+.photo-lightbox-close span { font-family: Arial, sans-serif; font-size: 34px; font-weight: 200; line-height: 1; transform: translateY(-2px); }
+.photo-lightbox-close:hover, .photo-lightbox-close:focus-visible { background: white; color: var(--ink); transform: scale(1.05); outline: none; }
+@keyframes lightboxFade { from { opacity: 0; } to { opacity: 1; } }
+
 .section-heading { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 60px; }
 .section-heading h2 { max-width: 760px; margin: 0; }
 .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
@@ -407,6 +417,9 @@ h2 { font-size: clamp(42px, 5.6vw, 78px); }
   .editorial-small { height: 390px; }
   .editorial-collage { gap: 9px; }
   .editorial-tile figcaption { left: 8px; bottom: 8px; padding: 7px 9px; font-size: 8px; }
+  .photo-lightbox { padding: 18px; }
+  .photo-lightbox-close { top: 14px; right: 14px; width: 44px; height: 44px; }
+  .photo-lightbox-frame img { max-width: 96vw; max-height: calc(88vh - 70px); }
   .feature-list { grid-template-columns: 1fr; }
   .section-heading { align-items: start; flex-direction: column; margin-bottom: 40px; }
   .desktop-link { display: none; }
