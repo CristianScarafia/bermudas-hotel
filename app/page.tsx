@@ -81,9 +81,19 @@ export default function Home() {
 
         <section className="editorial section">
           <div className="editorial-grid container">
-            <div className="editorial-image editorial-large reveal">
-              <Image src="/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp" alt="Habitación doble matrimonial renovada del Hotel Bermudas en Mar del Plata" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" unoptimized />
-              <span className="image-tag">Confort renovado</span>
+            <div className="editorial-collage editorial-large room-collage reveal" aria-label="Habitaciones renovadas del Hotel Bermudas">
+              <figure className="editorial-tile editorial-tile-featured">
+                <Image src="/images/habitacion-triple-otra-vista-hotel-bermudas.webp" alt="Vista amplia de una habitación triple renovada" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" unoptimized />
+                <figcaption>Triple</figcaption>
+              </figure>
+              <figure className="editorial-tile">
+                <Image src="/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp" alt="Habitación doble matrimonial renovada" width={1800} height={1350} sizes="(max-width: 720px) 50vw, 29vw" unoptimized />
+                <figcaption>Doble</figcaption>
+              </figure>
+              <figure className="editorial-tile">
+                <Image src="/images/habitacion-cuadruple-familiar-hotel-bermudas.webp" alt="Habitación cuádruple familiar renovada" width={1800} height={1350} sizes="(max-width: 720px) 50vw, 29vw" unoptimized />
+                <figcaption>Cuádruple</figcaption>
+              </figure>
             </div>
             <div className="editorial-content reveal">
               <p className="eyebrow">Habitaciones</p>
@@ -97,8 +107,19 @@ export default function Home() {
               </ul>
               <Link className="button button-dark" href="/habitaciones">Ver habitaciones</Link>
             </div>
-            <div className="editorial-image editorial-small reveal">
-              <Image src="/images/IMG_0937.webp" alt="Baño privado moderno de una habitación" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 34vw" unoptimized />
+            <div className="editorial-collage editorial-small detail-collage reveal" aria-label="Baños renovados y placard de las habitaciones">
+              <figure className="editorial-tile detail-tile-featured">
+                <Image src="/images/bano-renovado-hotel-bermudas.webp" alt="Baño privado renovado con ducha y lavamanos" width={1800} height={1350} sizes="(max-width: 720px) 62vw, 24vw" unoptimized />
+                <figcaption>Baño renovado</figcaption>
+              </figure>
+              <figure className="editorial-tile">
+                <Image src="/images/bano-habitacion-hotel-bermudas.webp" alt="Detalle de otro baño privado del hotel" width={1800} height={1350} sizes="(max-width: 720px) 38vw, 14vw" unoptimized />
+                <figcaption>Baño privado</figcaption>
+              </figure>
+              <figure className="editorial-tile">
+                <Image src="/images/placard-habitacion-hotel-bermudas.webp" alt="Placard abierto y espacio de guardado de una habitación" width={1800} height={1350} sizes="(max-width: 720px) 38vw, 14vw" unoptimized />
+                <figcaption>Placard</figcaption>
+              </figure>
             </div>
           </div>
         </section>

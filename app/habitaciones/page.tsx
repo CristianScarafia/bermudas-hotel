@@ -13,21 +13,21 @@ export const metadata: Metadata = {
 };
 
 const photos = [
-  ["IMG_0930", "Habitación matrimonial con aire acondicionado"],
-  ["IMG_0936", "Habitación triple luminosa del hotel"],
-  ["IMG_1560", "Habitación cuádruple para familias y grupos"],
-  ["IMG_0927", "Baño privado con equipamiento renovado"],
-  ["IMG_0937", "Baño moderno con ducha"],
-  ["IMG_0923", "Placard y caja de seguridad en la habitación"],
-  ["IMG_0928", "Detalle del baño privado renovado"],
-  ["IMG_0931", "Acceso y espacio de guardado de la habitación"],
+  ["habitacion-doble-hotel-bermudas-mar-del-plata", "Habitación doble matrimonial renovada del Hotel Bermudas"],
+  ["habitacion-triple-hotel-bermudas-la-perla", "Habitación triple con cama matrimonial e individual"],
+  ["habitacion-cuadruple-familiar-hotel-bermudas", "Habitación cuádruple con cuatro plazas para familias y grupos"],
+  ["habitacion-doble-dos-camas-hotel-bermudas", "Habitación doble con dos camas individuales"],
+  ["habitacion-triple-otra-vista-hotel-bermudas", "Vista amplia de una habitación triple climatizada"],
+  ["habitacion-cuadruple-otra-vista-hotel-bermudas", "Otra vista de una habitación cuádruple familiar"],
+  ["bano-renovado-hotel-bermudas", "Baño privado renovado con ducha"],
+  ["placard-habitacion-hotel-bermudas", "Placard abierto y espacio de guardado de la habitación"],
 ] as const;
 
 export default function RoomsPage() {
   return <>
     <Header overlay />
     <main id="contenido">
-      <PageHero eyebrow="Descansá a tu manera" title="Habitaciones" copy="Espacios renovados, cómodos y funcionales para parejas, familias y grupos." image="/images/habitacion-triple-hotel-bermudas-la-perla.webp" alt="Habitación triple del Hotel Bermudas en La Perla, Mar del Plata" />
+      <PageHero eyebrow="Descansá a tu manera" title="Habitaciones" copy="Espacios renovados, cómodos y funcionales para parejas, familias y grupos." image="/images/habitacion-triple-otra-vista-hotel-bermudas.webp" alt="Vista amplia de una habitación renovada del Hotel Bermudas en Mar del Plata" />
       <section className="room-intro section container reveal">
         <div><p className="eyebrow">20 habitaciones</p><h2>Todo lo que necesitás para descansar bien.</h2></div>
         <div><p>Podés elegir habitaciones dobles, triples o cuádruples. Todas ofrecen las mismas comodidades y baños totalmente renovados, con una propuesta simple, cálida y confortable.</p><a className="text-link" href="https://wa.me/542236076020?text=Hola%2C%20quisiera%20saber%20qué%20habitación%20tienen%20disponible" target="_blank" rel="noreferrer">Consultar la opción ideal <SvgIcon name="arrow-up-right" /></a></div>
