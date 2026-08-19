@@ -53,9 +53,9 @@ export const rooms: Room[] = [
     image: "/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp",
     imageAlt: "Habitación doble renovada del Hotel Bermudas en Mar del Plata",
     gallery: [
-      { src: "/images/IMG_0930.webp", alt: "Cama matrimonial y aire acondicionado en una habitación doble del Hotel Bermudas" },
-      { src: "/images/IMG_0923.webp", alt: "Placard con caja de seguridad de una habitación del Hotel Bermudas" },
-      { src: "/images/IMG_0937.webp", alt: "Baño privado renovado de una habitación doble del Hotel Bermudas" },
+      { src: "/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp", alt: "Cama matrimonial de una habitación doble renovada del Hotel Bermudas" },
+      { src: "/images/habitacion-doble-dos-camas-hotel-bermudas.webp", alt: "Habitación doble con dos camas individuales en el Hotel Bermudas" },
+      { src: "/images/bano-renovado-hotel-bermudas.webp", alt: "Baño privado renovado con ducha de una habitación doble" },
     ],
     faqs: [
       { question: "¿La habitación doble admite más de dos personas?", answer: "Esta categoría está pensada para hasta dos huéspedes. Para tres o cuatro personas podés consultar las habitaciones triple o cuádruple." },
@@ -75,9 +75,9 @@ export const rooms: Room[] = [
     image: "/images/habitacion-triple-hotel-bermudas-la-perla.webp",
     imageAlt: "Habitación triple con cama matrimonial e individual en Hotel Bermudas, La Perla",
     gallery: [
-      { src: "/images/IMG_0936.webp", alt: "Habitación triple con cama matrimonial y cama individual en Mar del Plata" },
-      { src: "/images/IMG_0931.webp", alt: "Espacio de guardado y TV HD en una habitación triple del hotel" },
-      { src: "/images/IMG_0933.webp", alt: "Baño privado renovado con ducha de una habitación triple" },
+      { src: "/images/habitacion-triple-hotel-bermudas-la-perla.webp", alt: "Habitación triple con cama matrimonial y cama individual en Mar del Plata" },
+      { src: "/images/habitacion-triple-otra-vista-hotel-bermudas.webp", alt: "Vista amplia de una habitación triple con climatización y TV" },
+      { src: "/images/placard-habitacion-hotel-bermudas.webp", alt: "Placard y espacio de guardado de una habitación triple" },
     ],
     faqs: [
       { question: "¿La habitación triple es adecuada para una familia?", answer: "Sí. Es una opción habitual para dos adultos y un menor o para tres huéspedes. Contanos cómo se compone el grupo para recomendarte la alternativa disponible." },
@@ -97,9 +97,9 @@ export const rooms: Room[] = [
     image: "/images/habitacion-cuadruple-familiar-hotel-bermudas.webp",
     imageAlt: "Habitación cuádruple familiar del Hotel Bermudas en Mar del Plata",
     gallery: [
-      { src: "/images/IMG_1560.webp", alt: "Habitación cuádruple con camas para una familia en Hotel Bermudas" },
-      { src: "/images/IMG_0923.webp", alt: "Placard y caja de seguridad disponibles en la habitación cuádruple" },
-      { src: "/images/IMG_1563.webp", alt: "Baño privado renovado de una habitación familiar del hotel" },
+      { src: "/images/habitacion-cuadruple-familiar-hotel-bermudas.webp", alt: "Habitación cuádruple con cuatro plazas para una familia en Hotel Bermudas" },
+      { src: "/images/habitacion-cuadruple-otra-vista-hotel-bermudas.webp", alt: "Otra vista de las camas de una habitación cuádruple familiar" },
+      { src: "/images/bano-habitacion-hotel-bermudas.webp", alt: "Baño privado renovado de una habitación familiar del hotel" },
     ],
     faqs: [
       { question: "¿La habitación cuádruple admite familias?", answer: "Sí. Está pensada para familias o grupos de hasta cuatro huéspedes. Indicá las edades de los menores al consultar para recibir la opción adecuada." },

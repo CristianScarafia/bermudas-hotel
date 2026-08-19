@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 };
 
 const photos = [
-  ["IMG_0930", "Habitación matrimonial con aire acondicionado"],
-  ["IMG_0936", "Habitación triple luminosa del hotel"],
-  ["IMG_1560", "Habitación cuádruple para familias y grupos"],
-  ["IMG_0927", "Baño privado con equipamiento renovado"],
-  ["IMG_0937", "Baño moderno con ducha"],
-  ["IMG_0923", "Placard y caja de seguridad en la habitación"],
-  ["IMG_0928", "Detalle del baño privado renovado"],
-  ["IMG_0931", "Acceso y espacio de guardado de la habitación"],
+  ["habitacion-doble-hotel-bermudas-mar-del-plata", "Habitación doble matrimonial renovada del Hotel Bermudas"],
+  ["habitacion-triple-hotel-bermudas-la-perla", "Habitación triple con cama matrimonial e individual"],
+  ["habitacion-cuadruple-familiar-hotel-bermudas", "Habitación cuádruple con cuatro plazas para familias y grupos"],
+  ["habitacion-doble-dos-camas-hotel-bermudas", "Habitación doble con dos camas individuales"],
+  ["habitacion-triple-otra-vista-hotel-bermudas", "Vista amplia de una habitación triple climatizada"],
+  ["habitacion-cuadruple-otra-vista-hotel-bermudas", "Otra vista de una habitación cuádruple familiar"],
+  ["bano-renovado-hotel-bermudas", "Baño privado renovado con ducha"],
+  ["placard-habitacion-hotel-bermudas", "Placard abierto y espacio de guardado de la habitación"],
 ] as const;
 
 export default function RoomsPage() {

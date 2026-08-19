@@ -98,7 +98,7 @@ export default function Home() {
               <Link className="button button-dark" href="/habitaciones">Ver habitaciones</Link>
             </div>
             <div className="editorial-image editorial-small reveal">
-              <Image src="/images/IMG_0937.webp" alt="Baño privado moderno de una habitación" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 34vw" unoptimized />
+              <Image src="/images/bano-renovado-hotel-bermudas.webp" alt="Baño privado renovado del Hotel Bermudas" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 34vw" unoptimized />
             </div>
           </div>
         </section>
