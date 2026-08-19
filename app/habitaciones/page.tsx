@@ -27,7 +27,7 @@ export default function RoomsPage() {
   return <>
     <Header overlay />
     <main id="contenido">
-      <PageHero eyebrow="Descansá a tu manera" title="Habitaciones" copy="Espacios renovados, cómodos y funcionales para parejas, familias y grupos." image="/images/habitacion-triple-hotel-bermudas-la-perla.webp" alt="Habitación triple del Hotel Bermudas en La Perla, Mar del Plata" />
+      <PageHero eyebrow="Descansá a tu manera" title="Habitaciones" copy="Espacios renovados, cómodos y funcionales para parejas, familias y grupos." image="/images/habitacion-triple-otra-vista-hotel-bermudas.webp" alt="Vista amplia de una habitación renovada del Hotel Bermudas en Mar del Plata" />
       <section className="room-intro section container reveal">
         <div><p className="eyebrow">20 habitaciones</p><h2>Todo lo que necesitás para descansar bien.</h2></div>
         <div><p>Podés elegir habitaciones dobles, triples o cuádruples. Todas ofrecen las mismas comodidades y baños totalmente renovados, con una propuesta simple, cálida y confortable.</p><a className="text-link" href="https://wa.me/542236076020?text=Hola%2C%20quisiera%20saber%20qué%20habitación%20tienen%20disponible" target="_blank" rel="noreferrer">Consultar la opción ideal <SvgIcon name="arrow-up-right" /></a></div>
