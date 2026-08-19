@@ -88,8 +88,17 @@ h2 { font-size: clamp(42px, 5.6vw, 78px); }
 .editorial-image { position: relative; overflow: hidden; }
 .editorial-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
 .editorial-image:hover img { transform: scale(1.035); }
+.editorial-collage { display: grid; gap: 14px; }
+.editorial-tile { position: relative; min-width: 0; min-height: 0; margin: 0; overflow: hidden; background: #d8d0c3; }
+.editorial-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.editorial-tile:hover img { transform: scale(1.035); }
+.editorial-tile figcaption { position: absolute; left: 12px; bottom: 12px; padding: 9px 12px; background: rgba(247,242,232,.93); color: var(--ink); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; backdrop-filter: blur(8px); }
 .editorial-large { height: 660px; grid-row: 1 / 3; }
-.editorial-small { width: 78%; height: 340px; justify-self: end; }
+.room-collage { grid-template-columns: 1fr 1fr; grid-template-rows: 1.25fr .75fr; }
+.room-collage .editorial-tile-featured { grid-column: 1 / -1; }
+.detail-collage { grid-template-columns: 1.28fr .72fr; grid-template-rows: 1fr 1fr; }
+.detail-collage .detail-tile-featured { grid-row: 1 / 3; }
+.editorial-small { width: 100%; height: 360px; justify-self: end; }
 .image-tag { position: absolute; left: 0; bottom: 0; padding: 16px 21px; background: var(--paper); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 .editorial-content { padding-top: 20px; }
 .editorial-content h2 { font-size: clamp(46px, 4.8vw, 69px); }
@@ -393,9 +402,11 @@ h2 { font-size: clamp(42px, 5.6vw, 78px); }
   .section-number { padding: 0; }
   .intro-copy { grid-column: auto; }
   .editorial-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .editorial-large { height: 470px; grid-row: auto; }
+  .editorial-large { height: 520px; grid-row: auto; }
   .editorial-content { padding-top: 20px; }
-  .editorial-small { height: 300px; }
+  .editorial-small { height: 390px; }
+  .editorial-collage { gap: 9px; }
+  .editorial-tile figcaption { left: 8px; bottom: 8px; padding: 7px 9px; font-size: 8px; }
   .feature-list { grid-template-columns: 1fr; }
   .section-heading { align-items: start; flex-direction: column; margin-bottom: 40px; }
   .desktop-link { display: none; }
