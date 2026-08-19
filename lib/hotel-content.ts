@@ -9,7 +9,7 @@ export type FaqItem = {
 };
 
 export type Room = {
-  slug: "doble" | "triple" | "cuadruple";
+  slug: "doble" | "triple" | "cuadruple" | "quintuple";
   name: string;
   shortName: string;
   capacity: number;
@@ -58,7 +58,7 @@ export const rooms: Room[] = [
       { src: "/images/bano-renovado-hotel-bermudas.webp", alt: "Baño privado renovado con ducha de una habitación doble" },
     ],
     faqs: [
-      { question: "¿La habitación doble admite más de dos personas?", answer: "Esta categoría está pensada para hasta dos huéspedes. Para tres o cuatro personas podés consultar las habitaciones triple o cuádruple." },
+      { question: "¿La habitación doble admite más de dos personas?", answer: "Esta categoría está pensada para hasta dos huéspedes. Para grupos más grandes podés consultar las habitaciones triple, cuádruple o quíntuple." },
       ...sharedRoomFaqs,
     ],
   },
@@ -94,15 +94,38 @@ export const rooms: Room[] = [
     intro: "Más lugar para compartir la estadía sin resignar comodidad, a pocos pasos de la playa y cerca de la peatonal.",
     idealFor: "Familias y grupos de hasta cuatro personas que prefieren alojarse juntos.",
     bed: "Configuración para cuatro huéspedes, sujeta a disponibilidad al momento de reservar.",
-    image: "/images/habitacion-cuadruple-familiar-hotel-bermudas.webp",
+    image: "/images/habitacion-cuadruple-moderna-hotel-bermudas.webp",
     imageAlt: "Habitación cuádruple familiar del Hotel Bermudas en Mar del Plata",
     gallery: [
-      { src: "/images/habitacion-cuadruple-familiar-hotel-bermudas.webp", alt: "Habitación cuádruple con cuatro plazas para una familia en Hotel Bermudas" },
-      { src: "/images/habitacion-cuadruple-otra-vista-hotel-bermudas.webp", alt: "Otra vista de las camas de una habitación cuádruple familiar" },
-      { src: "/images/bano-habitacion-hotel-bermudas.webp", alt: "Baño privado renovado de una habitación familiar del hotel" },
+      { src: "/images/habitacion-cuadruple-moderna-hotel-bermudas.webp", alt: "Habitación cuádruple moderna con cama matrimonial y camas individuales" },
+      { src: "/images/habitacion-cuadruple-moderna-otra-vista-hotel-bermudas.webp", alt: "Otra vista de la habitación cuádruple moderna del Hotel Bermudas" },
+      { src: "/images/bano-habitacion-cuadruple-moderna-hotel-bermudas.webp", alt: "Baño privado renovado de una habitación cuádruple" },
     ],
     faqs: [
       { question: "¿La habitación cuádruple admite familias?", answer: "Sí. Está pensada para familias o grupos de hasta cuatro huéspedes. Indicá las edades de los menores al consultar para recibir la opción adecuada." },
+      ...sharedRoomFaqs,
+    ],
+  },
+  {
+    slug: "quintuple",
+    name: "Habitación quíntuple en Mar del Plata",
+    shortName: "Habitación quíntuple",
+    capacity: 5,
+    eyebrow: "Para cinco huéspedes",
+    description: "Habitación quíntuple en Hotel Bermudas, Mar del Plata, distribuida en dos ambientes y equipada con baño privado, Wi-Fi, TV HD y climatización.",
+    intro: "Una alternativa amplia para cinco huéspedes, distribuida en dos ambientes para compartir la estadía con mayor comodidad.",
+    idealFor: "Familias numerosas y grupos de hasta cinco personas que prefieren alojarse juntos.",
+    bed: "Configuración para cinco huéspedes distribuida en dos ambientes, sujeta a disponibilidad.",
+    image: "/images/habitacion-quintuple-hotel-bermudas.webp",
+    imageAlt: "Habitación quíntuple de dos ambientes del Hotel Bermudas en Mar del Plata",
+    gallery: [
+      { src: "/images/habitacion-quintuple-hotel-bermudas.webp", alt: "Primer ambiente de la habitación quíntuple con cama matrimonial e individual" },
+      { src: "/images/habitacion-quintuple-segundo-ambiente-hotel-bermudas.webp", alt: "Segundo ambiente con camas individuales de la habitación quíntuple" },
+      { src: "/images/bano-habitacion-quintuple-hotel-bermudas.webp", alt: "Baño privado renovado de la habitación quíntuple" },
+      { src: "/images/placard-habitacion-quintuple-hotel-bermudas.webp", alt: "Placard y espacio de guardado de la habitación quíntuple" },
+    ],
+    faqs: [
+      { question: "¿Cómo se distribuye la habitación quíntuple?", answer: "La categoría ofrece capacidad para cinco huéspedes distribuida en dos ambientes. La asignación y la configuración exacta se confirman según disponibilidad." },
       ...sharedRoomFaqs,
     ],
   },
@@ -124,7 +147,7 @@ export const generalFaqs: FaqItem[] = [
   },
   {
     question: "¿Qué tipos de habitaciones ofrece el hotel?",
-    answer: "El hotel cuenta con habitaciones dobles, triples y cuádruples. Todas tienen baño privado renovado y comodidades para una estadía confortable.",
+    answer: "El hotel cuenta con habitaciones dobles, triples, cuádruples y quíntuples. Todas tienen baño privado renovado y comodidades para una estadía confortable.",
   },
   {
     question: "¿El desayuno está incluido?",
@@ -148,7 +171,7 @@ export const generalFaqs: FaqItem[] = [
   },
   {
     question: "¿Reciben familias y grupos?",
-    answer: "Sí. Hay habitaciones para hasta cuatro personas y atención específica para familias, grupos y contingentes. Para grupos grandes conviene solicitar una propuesta personalizada.",
+    answer: "Sí. Hay habitaciones para hasta cinco personas y atención específica para familias, grupos y contingentes. Para grupos grandes conviene solicitar una propuesta personalizada.",
   },
 ];
 

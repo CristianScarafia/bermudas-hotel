@@ -66,7 +66,7 @@ export function RoomDetail({ room }: { room: Room }) {
 
         <section className="room-gallery section container" aria-labelledby="gallery-title">
           <div className="section-heading reveal"><div><p className="eyebrow">Imágenes reales</p><h2 id="gallery-title">Conocé la habitación.</h2></div></div>
-          <div className="room-gallery-grid">
+          <div className={`room-gallery-grid room-gallery-count-${room.gallery.length}`}>
             {room.gallery.map((photo, index) => (
               <figure className={`reveal gallery-${index + 1}`} key={photo.src}>
                 <Image src={photo.src} alt={photo.alt} width={1800} height={1350} sizes={index === 0 ? "(max-width: 720px) 100vw, 65vw" : "(max-width: 720px) 100vw, 35vw"} unoptimized />

@@ -83,22 +83,22 @@ export default function Home() {
           <div className="editorial-grid container">
             <div className="editorial-collage editorial-large room-collage reveal" aria-label="Habitaciones renovadas del Hotel Bermudas">
               <figure className="editorial-tile editorial-tile-featured">
-                <Image src="/images/habitacion-triple-otra-vista-hotel-bermudas.webp" alt="Vista amplia de una habitación triple renovada" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" unoptimized />
-                <figcaption>Triple</figcaption>
+                <Image src="/images/habitacion-quintuple-hotel-bermudas.webp" alt="Primer ambiente de la habitación quíntuple renovada" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" unoptimized />
+                <figcaption>Quíntuple</figcaption>
               </figure>
               <figure className="editorial-tile">
                 <Image src="/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp" alt="Habitación doble matrimonial renovada" width={1800} height={1350} sizes="(max-width: 720px) 50vw, 29vw" unoptimized />
                 <figcaption>Doble</figcaption>
               </figure>
               <figure className="editorial-tile">
-                <Image src="/images/habitacion-cuadruple-familiar-hotel-bermudas.webp" alt="Habitación cuádruple familiar renovada" width={1800} height={1350} sizes="(max-width: 720px) 50vw, 29vw" unoptimized />
+                <Image src="/images/habitacion-cuadruple-moderna-hotel-bermudas.webp" alt="Habitación cuádruple moderna para familias" width={1800} height={1350} sizes="(max-width: 720px) 50vw, 29vw" unoptimized />
                 <figcaption>Cuádruple</figcaption>
               </figure>
             </div>
             <div className="editorial-content reveal">
               <p className="eyebrow">Habitaciones</p>
               <h2>Un descanso simple, cómodo y cuidado.</h2>
-              <p>Habitaciones dobles, triples y cuádruples pensadas para parejas, familias y grupos. Todas cuentan con baño privado renovado y las comodidades necesarias para disfrutar la estadía.</p>
+              <p>Habitaciones dobles, triples, cuádruples y quíntuples pensadas para parejas, familias y grupos. Todas cuentan con baño privado renovado y las comodidades necesarias para disfrutar la estadía.</p>
               <ul className="feature-list">
                 <li>Sommiers confortables</li>
                 <li>TV HD y Wi-Fi</li>
@@ -144,9 +144,34 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="breakfast-showcase section">
+          <div className="breakfast-layout container">
+            <div className="breakfast-copy reveal">
+              <p className="eyebrow">Cada mañana</p>
+              <h2>Un desayuno rico para empezar sin apuro.</h2>
+              <p>Una propuesta completa para cargar energía antes de salir a disfrutar la playa, el centro y todo Mar del Plata.</p>
+              <Link className="text-link" href="/servicios">Conocer los servicios <SvgIcon name="arrow-right" /></Link>
+            </div>
+            <div className="breakfast-collage reveal" aria-label="Desayuno del Hotel Bermudas">
+              <figure className="breakfast-tile breakfast-featured">
+                <Image src="/images/desayuno-medialunas-hotel-bermudas.webp" alt="Medialunas y panificados del desayuno del Hotel Bermudas" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 45vw" unoptimized />
+                <figcaption>Recién servido</figcaption>
+              </figure>
+              <figure className="breakfast-tile">
+                <Image src="/images/desayuno-buffet-hotel-bermudas.webp" alt="Buffet de desayuno del Hotel Bermudas" width={1800} height={1350} sizes="(max-width: 720px) 50vw, 23vw" unoptimized />
+                <figcaption>Desayuno incluido</figcaption>
+              </figure>
+              <figure className="breakfast-tile">
+                <Image src="/images/salon-desayuno-hotel-bermudas.webp" alt="Mesa preparada en el salón de desayuno del hotel" width={1800} height={1350} sizes="(max-width: 720px) 50vw, 23vw" unoptimized />
+                <figcaption>Buenos días</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
         <RelatedLinks title="Una estadía para cada viaje" links={[
           { href: "/hotel-en-la-perla", eyebrow: "A 100 m del mar", title: "Hotel en La Perla", copy: "Conocé por qué la ubicación facilita cada día del viaje." },
-          { href: "/alojamiento-familiar", eyebrow: "Hasta cuatro huéspedes", title: "Viajes en familia", copy: "Habitaciones y consejos para organizar una estadía compartida." },
+          { href: "/alojamiento-familiar", eyebrow: "Hasta cinco huéspedes", title: "Viajes en familia", copy: "Habitaciones y consejos para organizar una estadía compartida." },
           { href: "/guias", eyebrow: "Ideas locales", title: "Guías de Mar del Plata", copy: "Recorridos originales para disfrutar la costa y el centro.", event: "view_local_guide" },
         ]} />
 

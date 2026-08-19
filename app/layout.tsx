@@ -78,6 +78,7 @@ const hotelSchema = {
     `${siteUrl}/images/fachada-hotel-bermudas-la-perla.webp`,
     `${siteUrl}/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp`,
     `${siteUrl}/images/habitacion-triple-hotel-bermudas-la-perla.webp`,
+    `${siteUrl}/images/habitacion-quintuple-hotel-bermudas.webp`,
   ],
   description:
     "Hotel familiar en La Perla, Mar del Plata, a 100 metros del mar y a 300 metros de la peatonal.",
@@ -108,6 +109,7 @@ const hotelSchema = {
     { "@type": "HotelRoom", "@id": `${siteUrl}/habitaciones/doble#habitacion`, name: "Habitación doble", url: `${siteUrl}/habitaciones/doble`, occupancy: { "@type": "QuantitativeValue", maxValue: 2 } },
     { "@type": "HotelRoom", "@id": `${siteUrl}/habitaciones/triple#habitacion`, name: "Habitación triple", url: `${siteUrl}/habitaciones/triple`, occupancy: { "@type": "QuantitativeValue", maxValue: 3 } },
     { "@type": "HotelRoom", "@id": `${siteUrl}/habitaciones/cuadruple#habitacion`, name: "Habitación cuádruple", url: `${siteUrl}/habitaciones/cuadruple`, occupancy: { "@type": "QuantitativeValue", maxValue: 4 } },
+    { "@type": "HotelRoom", "@id": `${siteUrl}/habitaciones/quintuple#habitacion`, name: "Habitación quíntuple", url: `${siteUrl}/habitaciones/quintuple`, occupancy: { "@type": "QuantitativeValue", maxValue: 5 } },
   ],
 };
 

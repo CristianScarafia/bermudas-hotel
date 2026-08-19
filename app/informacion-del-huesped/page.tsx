@@ -30,7 +30,7 @@ export default function GuestInformationPage() {
     <aside className="accuracy-note"><div className="container"><strong>Importante</strong><p>La información definitiva es la que recibís por los canales oficiales del Hotel Bermudas para tus fechas. Si una condición es esencial para tu viaje, consultala antes de confirmar.</p></div></aside>
     <RelatedLinks links={[
       { href: "/preguntas-frecuentes", eyebrow: "Respuestas rápidas", title: "Preguntas frecuentes", copy: "Resolvé las consultas más habituales antes de reservar." },
-      { href: "/habitaciones", eyebrow: "Hasta cuatro huéspedes", title: "Ver habitaciones", copy: "Elegí entre habitaciones dobles, triples y cuádruples.", event: "view_room" },
+      { href: "/habitaciones", eyebrow: "Hasta cinco huéspedes", title: "Ver habitaciones", copy: "Elegí entre habitaciones dobles, triples, cuádruples y quíntuples.", event: "view_room" },
       { href: "/contacto", eyebrow: "Atención directa", title: "Canales de contacto", copy: "WhatsApp, teléfono, correo y ubicación del hotel." },
     ]} />
     <BookingCta /><JsonLd data={schema} />

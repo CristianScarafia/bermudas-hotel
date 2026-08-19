@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/habitaciones/doble",
     "/habitaciones/triple",
     "/habitaciones/cuadruple",
+    "/habitaciones/quintuple",
     "/servicios",
     "/ubicacion",
     "/contacto",
