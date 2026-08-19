@@ -28,7 +28,7 @@ export default function FrequentlyAskedQuestionsPage() {
     <Breadcrumbs items={[{ label: "Preguntas frecuentes" }]} />
     <FaqSection faqs={generalFaqs} title="Lo que necesitás saber" eyebrow="Hotel Bermudas" />
     <RelatedLinks links={[
-      { href: "/habitaciones", eyebrow: "Elegí tu espacio", title: "Habitaciones", copy: "Compará opciones dobles, triples y cuádruples.", event: "view_room" },
+      { href: "/habitaciones", eyebrow: "Elegí tu espacio", title: "Habitaciones", copy: "Compará opciones dobles, triples, cuádruples y quíntuples.", event: "view_room" },
       { href: "/informacion-del-huesped", eyebrow: "Condiciones claras", title: "Información del huésped", copy: "Conocé cómo consultar pagos, horarios y políticas." },
       { href: "/ubicacion", eyebrow: "La Perla", title: "Cómo llegar", copy: "Encontrá el hotel y explorá la zona en el mapa." },
     ]} />
