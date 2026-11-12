@@ -1,5 +1,6 @@
 import { chromium } from "@playwright/test";
 import { mkdir, writeFile } from "node:fs/promises";
+import { canCrawlPath } from "./robots-policy.mjs";
 const base = process.env.TEST_BASE_URL || "http://127.0.0.1:5175";
 const expectIndexable = process.env.EXPECT_INDEXABLE === "true";
 const label = process.env.AUDIT_LABEL || "release";
@@ -64,7 +65,8 @@ for (const path of links) {
 }
 const robotsResponse = await context.request.get(`${base}/robots.txt`);
 const robots = await robotsResponse.text();
-if (expectIndexable && /Disallow:\s*\/\s*$/im.test(robots)) failures.push({ path: "/robots.txt", issues: ["Blocked crawl"] });
+const blockedSearchRoutes = ["Googlebot", "Bingbot"].flatMap(agent => routes.filter(path => !canCrawlPath(robots, agent, path)).map(path => `${agent}: ${path}`));
+if (expectIndexable && (!robotsResponse.ok() || blockedSearchRoutes.length)) failures.push({ path: "/robots.txt", issues: [!robotsResponse.ok() ? `HTTP ${robotsResponse.status()}` : `Blocked search crawl: ${blockedSearchRoutes.join(", ")}`] });
 await browser.close();
 await writeFile(`outputs/${label}-audit/report.json`, JSON.stringify({ base, routes: routes.length, pages, checkedLinks: links.size, badLinks, failures, robots }, null, 2));
 console.log(JSON.stringify({ base, routes: routes.length, viewports: pages.length, checkedLinks: links.size, badLinks, failures }));
