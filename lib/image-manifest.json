@@ -1,0 +1,757 @@
+{
+  "/images/IMG_0920.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "395d9d092938",
+    "variants": [
+      {
+        "src": "/images/IMG_0920-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0920-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0920-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0921.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "39a0d870ad72",
+    "variants": [
+      {
+        "src": "/images/IMG_0921-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0921-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0921-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0923.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "7ae928a60be1",
+    "variants": [
+      {
+        "src": "/images/IMG_0923-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0923-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0923-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0927.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "5c9b500de7bf",
+    "variants": [
+      {
+        "src": "/images/IMG_0927-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0927-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0927-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0928.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "55816a753f46",
+    "variants": [
+      {
+        "src": "/images/IMG_0928-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0928-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0928-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0931.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "5647f5e2c20e",
+    "variants": [
+      {
+        "src": "/images/IMG_0931-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0931-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0931-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0933.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "f3237d2ff76a",
+    "variants": [
+      {
+        "src": "/images/IMG_0933-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0933-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0933-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0936.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "cd4f2b3483cc",
+    "variants": [
+      {
+        "src": "/images/IMG_0936-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0936-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0936-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0937.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "801084d8604c",
+    "variants": [
+      {
+        "src": "/images/IMG_0937-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0937-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0937-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0947.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "90ee4f22a5f5",
+    "variants": [
+      {
+        "src": "/images/IMG_0947-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0947-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0947-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_0971.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "3e75ac8d6378",
+    "variants": [
+      {
+        "src": "/images/IMG_0971-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_0971-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_0971-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_1560.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "ff9dacb597ab",
+    "variants": [
+      {
+        "src": "/images/IMG_1560-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_1560-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_1560-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/IMG_1563.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "347381d2eed0",
+    "variants": [
+      {
+        "src": "/images/IMG_1563-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/IMG_1563-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/IMG_1563-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/bano-habitacion-cuadruple-moderna-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "4a25313d7e1a",
+    "variants": [
+      {
+        "src": "/images/bano-habitacion-cuadruple-moderna-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/bano-habitacion-cuadruple-moderna-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/bano-habitacion-cuadruple-moderna-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/bano-habitacion-hotel-bermudas.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "f4882a10233f",
+    "variants": [
+      {
+        "src": "/images/bano-habitacion-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/bano-habitacion-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/bano-habitacion-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/bano-habitacion-quintuple-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "903a8ac37a79",
+    "variants": [
+      {
+        "src": "/images/bano-habitacion-quintuple-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/bano-habitacion-quintuple-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/bano-habitacion-quintuple-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/bano-renovado-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "718dce592377",
+    "variants": [
+      {
+        "src": "/images/bano-renovado-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/bano-renovado-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/bano-renovado-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/casino-central-mar-del-plata.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "cfa2471e7694",
+    "variants": [
+      {
+        "src": "/images/casino-central-mar-del-plata-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/casino-central-mar-del-plata-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/casino-central-mar-del-plata-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/catedral-peatonal-san-martin-mar-del-plata.webp": {
+    "width": 1350,
+    "height": 2100,
+    "version": "d602ec0257f3",
+    "variants": [
+      {
+        "src": "/images/catedral-peatonal-san-martin-mar-del-plata-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/catedral-peatonal-san-martin-mar-del-plata-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/catedral-peatonal-san-martin-mar-del-plata-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/costa-la-perla-mar-del-plata.webp": {
+    "width": 1000,
+    "height": 750,
+    "version": "986b97b2b22c",
+    "variants": [
+      {
+        "src": "/images/costa-la-perla-mar-del-plata-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/costa-la-perla-mar-del-plata-768.webp",
+        "width": 768
+      }
+    ]
+  },
+  "/images/desayuno-buffet-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "717f170bfb9f",
+    "variants": [
+      {
+        "src": "/images/desayuno-buffet-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/desayuno-buffet-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/desayuno-buffet-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/desayuno-medialunas-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "46601885312f",
+    "variants": [
+      {
+        "src": "/images/desayuno-medialunas-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/desayuno-medialunas-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/desayuno-medialunas-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/fachada-hotel-bermudas-la-perla.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "956beb590bb6",
+    "variants": [
+      {
+        "src": "/images/fachada-hotel-bermudas-la-perla-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/fachada-hotel-bermudas-la-perla-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/fachada-hotel-bermudas-la-perla-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-cuadruple-familiar-hotel-bermudas.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "c116f04671bb",
+    "variants": [
+      {
+        "src": "/images/habitacion-cuadruple-familiar-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-cuadruple-familiar-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-cuadruple-familiar-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-cuadruple-moderna-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "8cf3fc1dac4b",
+    "variants": [
+      {
+        "src": "/images/habitacion-cuadruple-moderna-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-cuadruple-moderna-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-cuadruple-moderna-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-cuadruple-moderna-otra-vista-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "31a82a511274",
+    "variants": [
+      {
+        "src": "/images/habitacion-cuadruple-moderna-otra-vista-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-cuadruple-moderna-otra-vista-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-cuadruple-moderna-otra-vista-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-cuadruple-otra-vista-hotel-bermudas.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "61722c9f3259",
+    "variants": [
+      {
+        "src": "/images/habitacion-cuadruple-otra-vista-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-cuadruple-otra-vista-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-cuadruple-otra-vista-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-doble-dos-camas-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "dd0957d90149",
+    "variants": [
+      {
+        "src": "/images/habitacion-doble-dos-camas-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-doble-dos-camas-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-doble-dos-camas-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-doble-hotel-bermudas-mar-del-plata.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "f1b4ec2b9a11",
+    "variants": [
+      {
+        "src": "/images/habitacion-doble-hotel-bermudas-mar-del-plata-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-doble-hotel-bermudas-mar-del-plata-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-doble-hotel-bermudas-mar-del-plata-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-quintuple-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "12434c33c26e",
+    "variants": [
+      {
+        "src": "/images/habitacion-quintuple-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-quintuple-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-quintuple-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-quintuple-segundo-ambiente-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "e21538c8d850",
+    "variants": [
+      {
+        "src": "/images/habitacion-quintuple-segundo-ambiente-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-quintuple-segundo-ambiente-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-quintuple-segundo-ambiente-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-triple-hotel-bermudas-la-perla.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "80ba8e2f90db",
+    "variants": [
+      {
+        "src": "/images/habitacion-triple-hotel-bermudas-la-perla-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-triple-hotel-bermudas-la-perla-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-triple-hotel-bermudas-la-perla-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/habitacion-triple-otra-vista-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "553e1ac2d51d",
+    "variants": [
+      {
+        "src": "/images/habitacion-triple-otra-vista-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/habitacion-triple-otra-vista-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/habitacion-triple-otra-vista-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/logo-bermudas.webp": {
+    "width": 500,
+    "height": 500,
+    "version": "7f9ed5d2e858",
+    "variants": [
+      {
+        "src": "/images/logo-bermudas-480.webp",
+        "width": 480
+      }
+    ]
+  },
+  "/images/mapa-ubicacion-hotel-bermudas.webp": {
+    "width": 760,
+    "height": 760,
+    "version": "595bdae9a861",
+    "variants": [
+      {
+        "src": "/images/mapa-ubicacion-hotel-bermudas-480.webp",
+        "width": 480
+      }
+    ]
+  },
+  "/images/mar-del-plata.webp": {
+    "width": 1000,
+    "height": 750,
+    "version": "986b97b2b22c",
+    "variants": [
+      {
+        "src": "/images/mar-del-plata-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/mar-del-plata-768.webp",
+        "width": 768
+      }
+    ]
+  },
+  "/images/placard-habitacion-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "d2a2d1c55f6d",
+    "variants": [
+      {
+        "src": "/images/placard-habitacion-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/placard-habitacion-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/placard-habitacion-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/placard-habitacion-quintuple-hotel-bermudas.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "fae2862e25f4",
+    "variants": [
+      {
+        "src": "/images/placard-habitacion-quintuple-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/placard-habitacion-quintuple-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/placard-habitacion-quintuple-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/playa-la-perla-mar-del-plata.webp": {
+    "width": 1800,
+    "height": 1200,
+    "version": "55fa10eb4169",
+    "variants": [
+      {
+        "src": "/images/playa-la-perla-mar-del-plata-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/playa-la-perla-mar-del-plata-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/playa-la-perla-mar-del-plata-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/recepcion-hotel-bermudas-mar-del-plata.webp": {
+    "width": 1448,
+    "height": 1086,
+    "version": "3e75ac8d6378",
+    "variants": [
+      {
+        "src": "/images/recepcion-hotel-bermudas-mar-del-plata-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/recepcion-hotel-bermudas-mar-del-plata-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/recepcion-hotel-bermudas-mar-del-plata-1200.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/salon-desayuno-hotel-bermudas.webp": {
+    "width": 1800,
+    "height": 1350,
+    "version": "8269a2193f55",
+    "variants": [
+      {
+        "src": "/images/salon-desayuno-hotel-bermudas-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/salon-desayuno-hotel-bermudas-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/salon-desayuno-hotel-bermudas-1200.webp",
+        "width": 1200
+      }
+    ]
+  }
+}

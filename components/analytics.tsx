@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
+import { safeLinkDestination } from "@/lib/inquiry";
 
 declare global {
   interface Window {
@@ -29,9 +30,9 @@ export function Analytics({ measurementId }: { measurementId?: string }) {
       const eventName = conversionEvent(anchor);
       if (!eventName) return;
       window.gtag?.("event", eventName, {
-        link_url: anchor.href,
+        link_url: safeLinkDestination(anchor.href),
         page_path: window.location.pathname,
-        link_text: anchor.textContent?.trim().slice(0, 100),
+        cta_location: anchor.dataset.ctaLocation || "page_link",
       });
     };
     document.addEventListener("click", trackClick);

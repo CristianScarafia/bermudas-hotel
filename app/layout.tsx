@@ -1,18 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
-import { PhotoLightbox } from "@/components/photo-lightbox";
 import "./globals.css";
+import "./modern.css";
 
 const siteUrl = "https://bermudashotel.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  robots: process.env.HOTEL_LOCAL_PREVIEW === "true" ? { index: false, follow: false } : undefined,
   title: {
     default: "Hotel Bermudas | Hotel en La Perla, Mar del Plata",
     template: "%s | Hotel Bermudas",
   },
   description:
-    "Hotel en La Perla, Mar del Plata, a 100 metros del mar y 300 metros de la peatonal. Habitaciones renovadas, desayuno y atención personalizada.",
+    "Hotel en La Perla, Mar del Plata, a una cuadra del mar. Habitaciones renovadas, desayuno continental incluido y consultas directas para familias y grupos.",
   keywords: [
     "hotel en Mar del Plata",
     "hotel La Perla",
@@ -35,8 +36,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/fachada-hotel-bermudas-la-perla.webp",
-        width: 1800,
-        height: 1350,
+        width: 1448,
+        height: 1086,
         alt: "Fachada del Hotel Bermudas en el barrio La Perla de Mar del Plata",
       },
     ],
@@ -83,6 +84,8 @@ const hotelSchema = {
   description:
     "Hotel familiar en La Perla, Mar del Plata, a 100 metros del mar y a 300 metros de la peatonal.",
   numberOfRooms: 20,
+  checkinTime: "12:00",
+  checkoutTime: "10:00",
   priceRange: "$$",
   currenciesAccepted: "ARS",
   availableLanguage: ["es"],
@@ -96,8 +99,8 @@ const hotelSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: -37.993,
-    longitude: -57.547,
+    latitude: -37.9968725,
+    longitude: -57.5430431,
   },
   amenityFeature: [
     { "@type": "LocationFeatureSpecification", name: "Wi-Fi", value: true },
@@ -137,7 +140,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-        <PhotoLightbox />
         <Analytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       </body>
     </html>

@@ -32,7 +32,7 @@ test("renders production SEO metadata and structured data", async () => {
 });
 
 test("renders individual room pages with room and FAQ structured data", async () => {
-  for (const slug of ["doble", "triple", "cuadruple"]) {
+  for (const slug of ["doble", "triple", "cuadruple", "quintuple"]) {
     const response = await request(`/habitaciones/${slug}`);
     assert.equal(response.status, 200);
     const html = await response.text();
@@ -40,6 +40,31 @@ test("renders individual room pages with room and FAQ structured data", async ()
     assert.match(html, /"@type":"FAQPage"/);
     assert.match(html, new RegExp(`bermudashotel\\.com/habitaciones/${slug}`));
   }
+});
+
+const routes = ["/", "/habitaciones", "/habitaciones/doble", "/habitaciones/triple", "/habitaciones/cuadruple", "/habitaciones/quintuple", "/servicios", "/ubicacion", "/contacto", "/preguntas-frecuentes", "/informacion-del-huesped", "/hotel-en-la-perla", "/alojamiento-familiar", "/grupos-y-contingentes", "/agencias-de-viajes", "/alojamiento-para-eventos", "/viajes-de-egresados", "/ficha-comercial", "/guias", "/guias/la-perla-a-pie", "/guias/playas-cerca-del-hotel", "/guias/centro-de-mar-del-plata"];
+
+test("every public page renders its own canonical, heading and parseable schema", async () => {
+  for (const path of routes) {
+    const response = await request(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    const canonical = html.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/i)?.[1];
+    assert.equal(canonical?.replace(/\/$/, ""), `https://bermudashotel.com${path === "/" ? "" : path}`, path);
+    assert.match(html, /<h1\b/, path);
+    assert.match(html, /<html[^>]+lang="es-AR"/i, path);
+    const scripts = [...html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
+    assert.ok(scripts.length >= 2, path);
+    for (const script of scripts) assert.doesNotThrow(() => JSON.parse(script[1]), path);
+    assert.doesNotMatch(html, /Huésped verificado|★★★★★/, path);
+  }
+});
+
+test("sitemap includes every public route and unknown pages return 404", async () => {
+  const response = await request("/sitemap.xml");
+  const sitemap = await response.text();
+  for (const route of routes) assert.ok(sitemap.includes(`https://bermudashotel.com${route === "/" ? "" : route}`), route);
+  assert.equal((await request("/pagina-inexistente-de-prueba")).status, 404);
 });
 
 test("publishes expanded sitemap and FAQ page", async () => {

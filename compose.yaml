@@ -1,0 +1,28 @@
+name: bermudas-preview
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    init: true
+    ports:
+      - "127.0.0.1:5173:5173"
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+      HOTEL_LOCAL_PREVIEW: "true"
+      NEXT_PUBLIC_GA_MEASUREMENT_ID: ""
+    volumes:
+      - .:/app
+      - dependencies:/app/node_modules
+      - runtime:/app/.sites-runtime
+      - wrangler:/app/.wrangler
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:5173').then(async r=>{await r.arrayBuffer();process.exit(r.ok?0:1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 20s
+      start_period: 60s
+      retries: 5
+volumes:
+  dependencies:
+  runtime:
+  wrangler:

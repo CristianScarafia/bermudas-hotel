@@ -2,6 +2,19 @@ import type { IconName } from "@/components/icons";
 
 export const siteUrl = "https://bermudashotel.com";
 export const whatsappBase = "https://wa.me/542236076020";
+export const hotel = {
+  name: "Hotel Bermudas",
+  address: "3 de Febrero 2484",
+  city: "Mar del Plata",
+  phone: "+54 223 607-6020",
+  email: "bermudashotel@hotmail.com",
+  checkIn: "12:00",
+  checkOut: "10:00",
+  breakfast: "Desayuno continental incluido",
+  parking: "El hotel no cuenta con estacionamiento propio. Podés detenerte frente al hotel para bajar equipaje y hacer el ingreso, respetando la señalización. En los alrededores hay estacionamiento en la calle y cocheras privadas; consultá las opciones y condiciones al llegar.",
+  luggage: "Podés dejar tus bolsos en el hotel si llegás antes del ingreso o querés aprovechar la ciudad después de la salida.",
+};
+export const breakfastItems = ["Café, té, mate cocido y chocolate", "Leche fría y caliente", "Jugo y agua", "Yogures de frutilla y vainilla", "Cereales y tostadas", "Medialunas, manteca, mermeladas y dulce de leche"];
 
 export type FaqItem = {
   question: string;
@@ -31,7 +44,7 @@ const sharedRoomFaqs: FaqItem[] = [
   },
   {
     question: "¿Qué servicios están incluidos en la habitación?",
-    answer: "La habitación incluye Wi-Fi, TV HD, aire acondicionado frío/calor, sommier, caja de seguridad y baño privado. El hotel también ofrece desayuno.",
+    answer: "La estadía incluye desayuno continental. Las habitaciones tienen baño privado renovado, Wi-Fi, TV, aire acondicionado, sommier, caja de seguridad y placard.",
   },
   {
     question: "¿Cómo consulto disponibilidad y tarifa?",
@@ -151,7 +164,7 @@ export const generalFaqs: FaqItem[] = [
   },
   {
     question: "¿El desayuno está incluido?",
-    answer: "El hotel ofrece desayuno. Al consultar tu estadía, el equipo confirma el detalle incluido en la tarifa disponible.",
+    answer: "Sí. La estadía incluye desayuno continental con infusiones, leche, jugo, yogures, cereales, tostadas, medialunas, manteca, mermeladas y dulce de leche.",
   },
   {
     question: "¿Cómo puedo reservar?",
@@ -167,7 +180,11 @@ export const generalFaqs: FaqItem[] = [
   },
   {
     question: "¿Cuáles son los horarios de ingreso y salida?",
-    answer: "Los horarios operativos se confirman junto con la reserva. Si necesitás llegar temprano o salir más tarde, consultá previamente para evaluar disponibilidad.",
+    answer: "El check-in es desde las 12:00 y el check-out hasta las 10:00. Si llegás antes o querés seguir paseando después de la salida, podés dejar tus bolsos en el hotel. El uso de la habitación fuera de horario se consulta por separado.",
+  },
+  {
+    question: "¿El hotel tiene estacionamiento?",
+    answer: hotel.parking,
   },
   {
     question: "¿Reciben familias y grupos?",

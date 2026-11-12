@@ -46,10 +46,15 @@ export default defineConfig(async () => {
   return {
     server: {
       host: "0.0.0.0",
+      port: 5173,
+      strictPort: true,
       allowedHosts: ["terminal.local"],
-      ...(isCodexSeatbeltSandbox
-        ? { watch: { useFsEvents: false, usePolling: true } }
-        : {}),
+      watch: {
+        ignored: ["**/outputs/**", "**/work/**", "**/.sites-runtime/**", "**/*.tsbuildinfo"],
+        ...(isCodexSeatbeltSandbox || process.env.CHOKIDAR_USEPOLLING === "true"
+          ? { useFsEvents: false, usePolling: true }
+          : {}),
+      },
     },
     plugins: [
       vinext(),

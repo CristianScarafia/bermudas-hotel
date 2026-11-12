@@ -1,0 +1,13 @@
+node_modules
+.git
+.next
+dist
+work
+outputs
+source-images
+.sites-runtime
+.wrangler
+.agents
+.codex
+.env*
+*.tsbuildinfo

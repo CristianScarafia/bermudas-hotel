@@ -1,0 +1,156 @@
+[
+  {
+    "id": "01",
+    "hash": "5ffe41170e43d9c49c83bb4061619fac2685668721dc7867dea0eb8e2480853e",
+    "sources": [
+      "IMG_0971.webp",
+      "recepcion-hotel-bermudas-mar-del-plata.webp"
+    ],
+    "source": "IMG_0971.webp",
+    "status": "pending"
+  },
+  {
+    "id": "02",
+    "hash": "dddef888a7a189652d736cbc49583767f1ed9b3a62f6131128b6cb19ea3cee43",
+    "sources": [
+      "bano-habitacion-cuadruple-moderna-hotel-bermudas.webp"
+    ],
+    "source": "bano-habitacion-cuadruple-moderna-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "03",
+    "hash": "0c677f7d99cdb57cdfde3c40e80c432fadb37fd0b65763d1f66bfe22dd6b258f",
+    "sources": [
+      "bano-habitacion-quintuple-hotel-bermudas.webp"
+    ],
+    "source": "bano-habitacion-quintuple-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "04",
+    "hash": "822ce3e2b25ad4eb0aad985b8495f5fae4ae67c318c8345859b93811c6be4cdd",
+    "sources": [
+      "bano-renovado-hotel-bermudas.webp"
+    ],
+    "source": "bano-renovado-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "05",
+    "hash": "9cfe5b7a442646ae6d9b213156bc3cc4058fdad77d6d220ae3ff98622cf918fa",
+    "sources": [
+      "desayuno-buffet-hotel-bermudas.webp"
+    ],
+    "source": "desayuno-buffet-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "06",
+    "hash": "a6e03eeaf0745918da3beb05cb36207a3e45c864fca51093eef0b14d014d5843",
+    "sources": [
+      "desayuno-medialunas-hotel-bermudas.webp"
+    ],
+    "source": "desayuno-medialunas-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "07",
+    "hash": "43ea9dbf9fb68f7befe1a69129c594672f305cf2cb69a72de0bb86131252b3e0",
+    "sources": [
+      "fachada-hotel-bermudas-la-perla.webp"
+    ],
+    "source": "fachada-hotel-bermudas-la-perla.webp",
+    "status": "pending"
+  },
+  {
+    "id": "08",
+    "hash": "f7ff400aa7660bb549f9bad4af962ae0b4ace77f8ed8c0769d356849fa8a9947",
+    "sources": [
+      "habitacion-cuadruple-moderna-hotel-bermudas.webp"
+    ],
+    "source": "habitacion-cuadruple-moderna-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "09",
+    "hash": "36bedaea8e8edb132f54649c8f13e7e9afa3da66d6c04b4603f24cc89b387287",
+    "sources": [
+      "habitacion-cuadruple-moderna-otra-vista-hotel-bermudas.webp"
+    ],
+    "source": "habitacion-cuadruple-moderna-otra-vista-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "10",
+    "hash": "a6d6b85d9b4da3e7597624d715531703e19e70cea201d3e2ad4b966babd8e0cd",
+    "sources": [
+      "habitacion-doble-dos-camas-hotel-bermudas.webp"
+    ],
+    "source": "habitacion-doble-dos-camas-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "11",
+    "hash": "0897f9380fab11574426ba4073d2c55d81d82d139d2d08a8b2c0057615eebf20",
+    "sources": [
+      "habitacion-doble-hotel-bermudas-mar-del-plata.webp"
+    ],
+    "source": "habitacion-doble-hotel-bermudas-mar-del-plata.webp",
+    "status": "pending"
+  },
+  {
+    "id": "12",
+    "hash": "7171082bb6eb6f4dba9ab60231bd635dc6f5452bf2cb7724185a7b37e3b68f14",
+    "sources": [
+      "habitacion-quintuple-hotel-bermudas.webp"
+    ],
+    "source": "habitacion-quintuple-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "13",
+    "hash": "b017f8e325b6c96a2e3fde4a01f910e45db23c2210cdbef6acfd1a0ad8e2f859",
+    "sources": [
+      "habitacion-quintuple-segundo-ambiente-hotel-bermudas.webp"
+    ],
+    "source": "habitacion-quintuple-segundo-ambiente-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "14",
+    "hash": "54185ba6a73c0615859f5c97c214915a777e7eb97ef7b19ef8629536d3bafd57",
+    "sources": [
+      "habitacion-triple-hotel-bermudas-la-perla.webp"
+    ],
+    "source": "habitacion-triple-hotel-bermudas-la-perla.webp",
+    "status": "pending"
+  },
+  {
+    "id": "15",
+    "hash": "7a0d7fdc67d5143f8fa638d40ebb632327f3e88970c58b23fb6efd12347179ce",
+    "sources": [
+      "habitacion-triple-otra-vista-hotel-bermudas.webp"
+    ],
+    "source": "habitacion-triple-otra-vista-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "16",
+    "hash": "bee647e5826bb509fa1a16780104d33781bf58631330c086c69f2c82f43b7a67",
+    "sources": [
+      "placard-habitacion-hotel-bermudas.webp"
+    ],
+    "source": "placard-habitacion-hotel-bermudas.webp",
+    "status": "pending"
+  },
+  {
+    "id": "17",
+    "hash": "cb64ba68992cebca8f436ae667aabd1514f472c79d2a12ae7f7fd0012154733d",
+    "sources": [
+      "placard-habitacion-quintuple-hotel-bermudas.webp"
+    ],
+    "source": "placard-habitacion-quintuple-hotel-bermudas.webp",
+    "status": "pending"
+  }
+]

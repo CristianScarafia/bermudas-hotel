@@ -4,7 +4,7 @@ import { whatsappFor } from "@/lib/hotel-content";
 import { SvgIcon } from "@/components/icons";
 
 export function JsonLd({ data }: { data: object }) {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
 }
 
 export function Breadcrumbs({ items }: { items: Array<{ label: string; href?: string }> }) {
@@ -66,9 +66,8 @@ export function BookingCta({
         <p className="eyebrow light">Reserva directa</p>
         <h2>{title}</h2>
         <p>{copy}</p>
-        <a className="button button-primary" href={whatsappFor(message)} target="_blank" rel="noreferrer">
-          Consultar por WhatsApp <SvgIcon name="arrow-up-right" />
-        </a>
+        <Link className="button button-primary" href="/contacto#consultar">Preparar mi consulta <SvgIcon name="arrow-up-right" /></Link>
+        <a className="text-link light-link cta-direct" href={whatsappFor(message)} target="_blank" rel="noreferrer">Escribir directamente por WhatsApp</a>
       </div>
     </section>
   );

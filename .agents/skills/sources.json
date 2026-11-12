@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-11-11",
+  "selection_basis": "Señales públicas de adopción y mantenimiento: estrellas del repositorio completo, no valoraciones individuales ni garantía de resultados. Instrucciones revisadas antes de instalar.",
+  "skills": [
+    {
+      "name": "frontend-design",
+      "repository": "anthropics/skills",
+      "path": "skills/frontend-design",
+      "revision": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "source_url": "https://github.com/anthropics/skills/tree/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/frontend-design",
+      "last_skill_commit": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f",
+      "last_skill_update": "2026-09-03T16:37:13Z",
+      "repository_stars_at_review": 193058,
+      "repository_pushed_at": "2026-11-06T22:32:32Z",
+      "license": "Apache-2.0",
+      "license_file": "frontend-design/LICENSE.txt",
+      "local_changes": []
+    },
+    {
+      "name": "seo-audit",
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/seo-audit",
+      "revision": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "source_url": "https://github.com/coreyhaines31/marketingskills/tree/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/seo-audit",
+      "last_skill_commit": "c01f0843c4fb84bcd7c1e7fa1908758723ad9ef3",
+      "last_skill_update": "2026-11-09T21:42:19Z",
+      "repository_stars_at_review": 59757,
+      "repository_pushed_at": "2026-11-11T17:49:23Z",
+      "license": "MIT",
+      "license_file": "seo-audit/LICENSE.txt",
+      "local_changes": [
+        "LICENSE.txt copiado desde la licencia raíz upstream; instrucciones y referencias sin modificar."
+      ]
+    },
+    {
+      "name": "cro",
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/cro",
+      "revision": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "source_url": "https://github.com/coreyhaines31/marketingskills/tree/1f837447b20bb6f0e72d87b80ece1c221c362c7d/skills/cro",
+      "last_skill_commit": "6d123b4fae5f9160005f75a8870349e4df5a31aa",
+      "last_skill_update": "2026-11-09T21:38:08Z",
+      "repository_stars_at_review": 59757,
+      "repository_pushed_at": "2026-11-11T17:49:23Z",
+      "license": "MIT",
+      "license_file": "cro/LICENSE.txt",
+      "local_changes": [
+        "LICENSE.txt copiado desde la licencia raíz upstream; instrucciones y referencias sin modificar."
+      ]
+    }
+  ]
+}

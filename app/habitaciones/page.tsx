@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { ResponsiveImage } from "@/components/responsive-image";
 import Link from "next/link";
 import { Footer, Header, Icon, PageHero, WhatsAppButton } from "@/components/site-shell";
 import { SvgIcon } from "@/components/icons";
@@ -37,7 +37,7 @@ export default function RoomsPage() {
         <div className="section-heading reveal"><div><p className="eyebrow">Elegí tu habitación</p><h2 id="room-types-title">Una opción para cada viaje.</h2></div><p className="section-note">Capacidad máxima orientativa</p></div>
         <div className="room-type-grid">
           {rooms.map((room) => <article className="room-type-card reveal" key={room.slug}>
-            <Image src={room.gallery[0].src} alt={room.imageAlt} width={1800} height={1350} sizes="(max-width: 720px) 100vw, 33vw" unoptimized />
+            <ResponsiveImage src={room.gallery[0].src} alt={room.imageAlt} width={1800} height={1350} sizes="(max-width: 720px) 100vw, 33vw" />
             <div><span>Hasta {room.capacity} huéspedes</span><h3>{room.shortName}</h3><p>{room.intro}</p><Link href={`/habitaciones/${room.slug}`} data-analytics-event="view_room">Ver detalles <SvgIcon name="arrow-right" /></Link></div>
           </article>)}
         </div>
@@ -48,7 +48,7 @@ export default function RoomsPage() {
       <section className="gallery-section section container">
         <div className="section-heading reveal"><div><p className="eyebrow">Galería</p><h2>Conocé cada detalle.</h2></div><p className="section-note">Imágenes reales del hotel</p></div>
         <div className="photo-grid">
-          {photos.map(([photo, alt, caption], index) => <figure className={`photo-item photo-${index + 1} reveal`} key={photo}><Image src={`/images/${photo}.webp`} alt={alt} width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" unoptimized /><figcaption>{caption}</figcaption></figure>)}
+          {photos.map(([photo, alt, caption], index) => <figure className={`photo-item photo-${index + 1} reveal`} key={photo}><ResponsiveImage src={`/images/${photo}.webp`} alt={alt} width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" /><figcaption>{caption}</figcaption></figure>)}
         </div>
       </section>
       <FaqSection faqs={[generalFaqs[1], generalFaqs[2], generalFaqs[3], generalFaqs[4], generalFaqs[5]]} title="Preguntas sobre las habitaciones" />

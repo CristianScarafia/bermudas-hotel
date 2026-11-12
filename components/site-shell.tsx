@@ -2,16 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { SvgIcon, type IconName } from "@/components/icons";
 import { ResponsiveImage } from "@/components/responsive-image";
+import { MobileMenu } from "@/components/mobile-menu";
 
 const nav = [
   { href: "/habitaciones", label: "Habitaciones" },
+  { href: "/grupos-y-contingentes", label: "Grupos y agencias" },
   { href: "/servicios", label: "Servicios" },
   { href: "/ubicacion", label: "Ubicación" },
-  { href: "/preguntas-frecuentes", label: "Preguntas" },
   { href: "/contacto", label: "Contacto" },
 ];
 
-export function Header({ overlay = false }: { overlay?: boolean }) {
+export function Header({ overlay = false, inquiryHref = "/contacto#consultar" }: { overlay?: boolean; inquiryHref?: string }) {
   return (
     <header className={`site-header ${overlay ? "header-overlay" : "header-solid"}`}>
       <div className="header-inner container">
@@ -22,14 +23,8 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         <nav className="desktop-nav" aria-label="Navegación principal">
           {nav.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
         </nav>
-        <a className="header-book" href="https://wa.me/542236076020?text=Hola%20Hotel%20Bermudas%2C%20quisiera%20consultar%20disponibilidad" target="_blank" rel="noreferrer">Reservar <SvgIcon name="arrow-up-right" /></a>
-        <details className="mobile-menu">
-          <summary aria-label="Abrir menú"><span /><span /></summary>
-          <nav aria-label="Navegación móvil">
-            {nav.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
-            <a href="https://wa.me/542236076020?text=Hola%20Hotel%20Bermudas%2C%20quisiera%20consultar%20disponibilidad" target="_blank" rel="noreferrer">Reservar por WhatsApp</a>
-          </nav>
-        </details>
+        <Link className="header-book" href={inquiryHref}>Consultar <SvgIcon name="arrow-up-right" /></Link>
+        <MobileMenu nav={nav} inquiryHref={inquiryHref} />
       </div>
     </header>
   );
@@ -44,7 +39,7 @@ export function Footer() {
           <p>Hospitalidad, comodidad y cercanía para disfrutar Mar del Plata.</p>
         </div>
         <div className="footer-column"><h2>El hotel</h2><Link href="/hotel-en-la-perla">Hotel en La Perla</Link><Link href="/habitaciones">Habitaciones</Link><Link href="/servicios">Servicios</Link><Link href="/ubicacion">Ubicación</Link></div>
-        <div className="footer-column"><h2>Alojarse</h2><Link href="/alojamiento-familiar">Familias</Link><Link href="/grupos-y-contingentes">Grupos y contingentes</Link><Link href="/informacion-del-huesped">Información del huésped</Link><Link href="/preguntas-frecuentes">Preguntas frecuentes</Link></div>
+        <div className="footer-column"><h2>Alojarse</h2><Link href="/alojamiento-familiar">Familias</Link><Link href="/grupos-y-contingentes">Grupos y contingentes</Link><Link href="/agencias-de-viajes">Agencias de viajes</Link><Link href="/alojamiento-para-eventos">Congresos y eventos</Link><Link href="/informacion-del-huesped">Información del huésped</Link><Link href="/preguntas-frecuentes">Preguntas frecuentes</Link></div>
         <div className="footer-column"><h2>Guías locales</h2><Link href="/guias/la-perla-a-pie">La Perla a pie</Link><Link href="/guias/playas-cerca-del-hotel">Playas cercanas</Link><Link href="/guias/centro-de-mar-del-plata">Centro de Mar del Plata</Link></div>
         <div className="footer-column"><h2>Contacto</h2><a href="tel:+542236076020">+54 223 607-6020</a><a href="mailto:bermudashotel@hotmail.com">bermudashotel@hotmail.com</a><a href="https://maps.google.com/?q=3+de+Febrero+2484+Mar+del+Plata" target="_blank" rel="noreferrer">3 de Febrero 2484<br />Mar del Plata, Argentina</a><a className="text-link light-link" href="https://wa.me/542236076020" target="_blank" rel="noreferrer">WhatsApp <SvgIcon name="arrow-up-right" /></a></div>
       </div>
@@ -54,7 +49,7 @@ export function Footer() {
 }
 
 export function WhatsAppButton() {
-  return <a className="whatsapp" href="https://wa.me/542236076020?text=Hola%20Hotel%20Bermudas%2C%20quisiera%20consultar%20disponibilidad" target="_blank" rel="noreferrer" aria-label="Consultar disponibilidad por WhatsApp"><span>WhatsApp</span><b><SvgIcon name="whatsapp" /></b></a>;
+  return <div className="contact-dock"><span>¿Te quedó una pregunta?</span><a href="https://wa.me/542236076020?text=Hola%20Hotel%20Bermudas%2C%20quisiera%20consultar%20disponibilidad" target="_blank" rel="noreferrer" data-cta-location="footer_contact"><SvgIcon name="whatsapp" />Hablá con el hotel</a></div>;
 }
 
 export function Icon({ name }: { name: IconName }) {

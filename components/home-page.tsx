@@ -1,0 +1,49 @@
+import Link from "next/link";
+import { Footer, Header, Icon, WhatsAppButton } from "@/components/site-shell";
+import { SvgIcon } from "@/components/icons";
+import { ResponsiveImage } from "@/components/responsive-image";
+import { FaqSection } from "@/components/content-sections";
+import { InquiryForm } from "@/components/inquiry-form";
+import { DepthScene } from "@/components/depth-scene";
+import { RoomExplorer } from "@/components/room-explorer";
+import { generalFaqs } from "@/lib/hotel-content";
+import { CoastalDivider, CoastalPhotoEdge, CoastalSketch } from "@/components/coastal-art";
+
+export default function Home() {
+  return <>
+    <Header inquiryHref="#consultar" />
+    <main id="contenido" className="modern-home">
+      <section className="coast-hero container" aria-labelledby="hero-title">
+        <div className="coast-hero-copy">
+          <p className="hero-location"><span aria-hidden="true" />Hotel Bermudas, La Perla</p>
+          <h1 id="hero-title">Mar del Plata,<br />a tu ritmo.</h1>
+          <p className="coast-hero-lead">El mar cerca. Tu habitación lista para descansar. Un lugar para compartir la ciudad con quienes más querés.</p>
+          <div className="hero-actions"><a className="button button-primary" href="#consultar">Planeá tu estadía <SvgIcon name="arrow-up-right" /></a><Link className="text-link" href="/habitaciones">Ver habitaciones</Link></div>
+          <div className="hero-signature"><SvgIcon name="map" /><span>3 de Febrero 2484<br /><strong>La Perla · Mar del Plata</strong></span></div>
+        </div>
+        <DepthScene className="hero-depth">
+          <CoastalSketch kind="gulls" className="hero-gulls" />
+          <div className="coastal-lines" aria-hidden="true"><svg viewBox="0 0 600 600" fill="none">{[0, 1, 2, 3, 4].map(i => <path key={i} d={`M ${20 + i * 18} 580 V ${180 + i * 25} Q ${20 + i * 18} ${30 + i * 25} ${200 + i * 18} ${30 + i * 25} H 600`} />)}</svg></div>
+          <figure className="hero-main-photo"><ResponsiveImage src="/images/fachada-hotel-bermudas-la-perla.webp" alt="Frente del Hotel Bermudas de día, con cerramiento de vidrio, cartel de acero inoxidable, palmeras y flores" width={1448} height={1086} sizes="(max-width: 720px) 95vw, 55vw" priority /><figcaption>Bienvenidos a Bermudas.</figcaption></figure>
+          <figure className="hero-map-photo"><Link href="/ubicacion" aria-label="Ver la ubicación del Hotel Bermudas en La Perla"><ResponsiveImage src="/images/mapa-ubicacion-hotel-bermudas.webp" alt="Mapa de La Perla con el Hotel Bermudas señalado en 3 de Febrero 2484, cerca de la costa" width={760} height={760} sizes="(max-width: 480px) 110px, 170px" /></Link><figcaption>Nos encontrás en La Perla<span className="hero-map-credit">© OpenStreetMap</span></figcaption></figure>
+          <div className="hero-depth-note"><strong>De a dos.<br />En familia.<br />Con tu grupo.</strong><span>Encontrá tu forma de venir.</span></div>
+        </DepthScene>
+      </section>
+      <div className="comfort-strip"><div className="container">{([['bath', 'Baños renovados'], ['snow', 'Aire frío/calor'], ['wifi', 'Wi-Fi'], ['coffee', 'Desayuno incluido']] as const).map(([icon, label]) => <div key={icon}><Icon name={icon} /><span>{label}</span></div>)}<Link href="/servicios">Conocé los servicios <SvgIcon name="arrow-right" /></Link></div></div>
+      <section id="consultar" className="inquiry-section section container"><div className="inquiry-intro"><p className="section-label">La próxima escapada empieza acá</p><h2>Menos vueltas.<br />Más vacaciones.</h2><p>Contanos cuándo y con quién venís. Hablás directamente con el hotel para conocer disponibilidad, precio total y qué incluye tu estadía.</p><div className="inquiry-promise"><SvgIcon name="whatsapp" /><span>Una consulta con contexto.<br /><strong>Una respuesta para tu viaje.</strong></span></div><Link className="text-link" href="/informacion-del-huesped">Antes de confirmar tu reserva</Link></div><InquiryForm /></section>
+      <RoomExplorer />
+      <CoastalDivider to="ink" variant="swell" />
+      <section className="group-teaser section coastal-group"><CoastalSketch kind="waves" className="group-coastal-sketch" /><div className="container group-teaser-grid"><div className="group-teaser-copy"><p className="section-label">Grupos, agencias y organizadores</p><h2>Cuando el viaje<br />se comparte.</h2><p>Un contingente, una delegación o un encuentro en Mar del Plata. Consultá el alojamiento de tu grupo con una propuesta según fechas, cantidad de personas y distribución.</p><Link className="button button-primary" href="/grupos-y-contingentes">Organizar la estadía del grupo <SvgIcon name="arrow-up-right" /></Link><Link className="text-link light-link" href="/agencias-de-viajes">Información para agencias</Link></div><DepthScene className="group-depth"><div className="group-photo"><ResponsiveImage src="/images/recepcion-hotel-bermudas-mar-del-plata.webp" alt="Recepción del Hotel Bermudas, punto de contacto para organizar estadías grupales" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 48vw" /></div><div className="group-layer group-layer-one"><SvgIcon name="bed" /><span>Distintas habitaciones.<br /><strong>Una consulta centralizada.</strong></span></div><div className="group-layer group-layer-two"><span>Agencias · Deportes<br />Congresos · Contingentes</span></div></DepthScene></div></section>
+      <CoastalDivider from="ink" to="paper" variant="tide" /><section className="stay-story section container"><div className="stay-story-image"><ResponsiveImage src="/images/desayuno-medialunas-hotel-bermudas.webp" alt="Panificados servidos en el desayuno del Hotel Bermudas" width={1800} height={1350} sizes="(max-width: 720px) 100vw, 45vw" /><span>Los pequeños momentos del viaje.</span></div><div className="stay-story-copy"><CoastalSketch kind="shell" /><p className="section-label">Desayuno continental incluido</p><h2>Despertar.<br />Desayunar.<br />Salir a descubrir.</h2><p>Infusiones, yogures, cereales, tostadas y medialunas para empezar el día. Después, la playa y los paseos de La Perla te esperan cerca del hotel.</p><p className="small-note">Ingreso desde las 12:00 · Salida hasta las 10:00. Podés dejar tus bolsos y seguir disfrutando la ciudad.</p><Link className="text-link" href="/servicios">Todo lo que tiene el hotel <SvgIcon name="arrow-right" /></Link></div></section>
+      <section className="coast-location"><CoastalPhotoEdge /><CoastalPhotoEdge bottom /><ResponsiveImage src="/images/costa-la-perla-mar-del-plata.webp" alt="Costa de La Perla en Mar del Plata" width={1000} height={750} sizes="100vw" /><div className="container"><p className="section-label">La Perla, a pie</p><h2>Dejá espacio<br />para improvisar.</h2><p>Playa, paseos y centro para armar cada día a tu manera. Conocé dónde estamos y elegí tu primer recorrido.</p><Link className="button button-primary" href="/ubicacion">Ubicación y cómo llegar <SvgIcon name="arrow-up-right" /></Link></div></section>
+      <section className="compare-section section container"><div><p className="section-label">Elegí con toda la información</p><h2>¿Qué hace que<br />un hotel sea para vos?</h2><p>Además del precio, mirá el espacio que vas a compartir, los servicios y cómo se conecta con tus planes.</p></div><dl className="compare-list"><div><dt>La habitación que necesitás</dt><dd>Cuatro categorías para hasta cinco huéspedes. La quíntuple se distribuye en dos ambientes.</dd></div><div><dt>Lo que vas a encontrar</dt><dd>Fotos de habitaciones y baños reales. Equipamiento y distribución para conocer antes de consultar.</dd></div><div><dt>Las condiciones claras</dt><dd>Pedí precio total, incluidos, medios de pago y cancelación para comparar la misma estadía.</dd></div><div><dt>El contacto directo</dt><dd>El equipo del hotel te orienta sobre categoría y disponibilidad según tu viaje.</dd></div></dl></section>
+      <CoastalDivider to="mist" variant="shore" /><section className="local-journal section"><div className="container"><div className="journal-heading"><div><p className="section-label">Ideas para salir</p><h2>Conocé tu próximo barrio.</h2></div><Link className="text-link" href="/guias">Todas las guías <SvgIcon name="arrow-right" /></Link></div><div className="journal-grid">{[
+        { href: "/guias/la-perla-a-pie", image: "costa-la-perla-mar-del-plata", title: "La Perla, paso a paso", copy: "Una guía para empezar a recorrer el barrio desde el hotel." },
+        { href: "/guias/playas-cerca-del-hotel", image: "playa-la-perla-mar-del-plata", title: "Días de playa cerca", copy: "Cómo preparar una salida a la costa durante tu estadía." },
+        { href: "/guias/centro-de-mar-del-plata", image: "catedral-peatonal-san-martin-mar-del-plata", title: "Un paseo por el centro", copy: "Ideas para combinar peatonal, ciudad y una pausa en el camino." },
+      ].map(guide => <Link className="journal-item" href={guide.href} key={guide.href}><ResponsiveImage src={`/images/${guide.image}.webp`} alt={guide.title} width={guide.image === "costa-la-perla-mar-del-plata" ? 1000 : 1800} height={guide.image === "costa-la-perla-mar-del-plata" ? 750 : 1350} sizes="(max-width: 720px) 100vw, 33vw" /><h3>{guide.title} <SvgIcon name="arrow-up-right" /></h3><p>{guide.copy}</p></Link>)}</div></div></section>
+      <CoastalDivider from="mist" to="paper" variant="tide" /><FaqSection faqs={generalFaqs.slice(0, 5)} title="Antes de hacer la valija" />
+      <section className="closing-section section container"><CoastalSketch kind="sun" /><p className="section-label">Hotel Bermudas · Mar del Plata</p><h2>Ya tenés un lugar<br />para empezar.</h2><a className="button button-dark" href="#consultar">Consultá tu estadía <SvgIcon name="arrow-up-right" /></a><Link className="text-link" href="/grupos-y-contingentes">¿Venís con un grupo?</Link></section>
+    </main><Footer /><WhatsAppButton />
+  </>;
+}

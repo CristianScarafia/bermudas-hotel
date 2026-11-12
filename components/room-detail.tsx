@@ -1,5 +1,6 @@
-import Image from "next/image";
-import { BookingCta, Breadcrumbs, FaqSection, JsonLd, RelatedLinks } from "@/components/content-sections";
+import { Breadcrumbs, FaqSection, JsonLd, RelatedLinks } from "@/components/content-sections";
+import { PhotoGallery } from "@/components/photo-gallery";
+import { InquiryForm } from "@/components/inquiry-form";
 import { Footer, Header, Icon, PageHero, WhatsAppButton } from "@/components/site-shell";
 import { roomAmenities, rooms, siteUrl, type Room } from "@/lib/hotel-content";
 
@@ -66,13 +67,7 @@ export function RoomDetail({ room }: { room: Room }) {
 
         <section className="room-gallery section container" aria-labelledby="gallery-title">
           <div className="section-heading reveal"><div><p className="eyebrow">Imágenes reales</p><h2 id="gallery-title">Conocé la habitación.</h2></div></div>
-          <div className={`room-gallery-grid room-gallery-count-${room.gallery.length}`}>
-            {room.gallery.map((photo, index) => (
-              <figure className={`reveal gallery-${index + 1}`} key={photo.src}>
-                <Image src={photo.src} alt={photo.alt} width={1800} height={1350} sizes={index === 0 ? "(max-width: 720px) 100vw, 65vw" : "(max-width: 720px) 100vw, 35vw"} unoptimized />
-              </figure>
-            ))}
-          </div>
+          <PhotoGallery photos={room.gallery} />
           <p className="room-gallery-note">Las fotografías muestran habitaciones e instalaciones reales. La distribución y los detalles pueden variar según la unidad asignada.</p>
         </section>
 
@@ -87,7 +82,7 @@ export function RoomDetail({ room }: { room: Room }) {
             event: "view_room",
           })).concat([{ href: "/informacion-del-huesped", eyebrow: "Antes de viajar", title: "Información del huésped", copy: "Reservas, horarios, pagos y condiciones explicados con claridad.", event: "view_guest_information" }])}
         />
-        <BookingCta message={`Hola Hotel Bermudas, quisiera consultar disponibilidad para una ${room.shortName.toLowerCase()}. Mis fechas son:`} />
+        <section id="consultar-habitacion" className="inquiry-section section container"><div className="inquiry-intro"><p className="section-label">Elegiste tu espacio</p><h2>Ahora, contanos cuándo venís.</h2><p>Consultá esta categoría para tus fechas. La estadía incluye desayuno continental; el equipo confirma configuración de camas, disponibilidad y tarifa total.</p></div><InquiryForm room={room.slug} title={`Consultá la ${room.shortName.toLowerCase()}`} /></section>
         <JsonLd data={roomSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={breadcrumbSchema} />

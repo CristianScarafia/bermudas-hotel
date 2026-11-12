@@ -1,3 +1,5 @@
+import type { ReactEventHandler } from "react";
+import { imageInfo, imageSource } from "@/lib/image-info";
 type ResponsiveImageProps = {
   src: string;
   alt: string;
@@ -6,16 +8,16 @@ type ResponsiveImageProps = {
   sizes: string;
   className?: string;
   priority?: boolean;
+  onError?: ReactEventHandler<HTMLImageElement>;
 };
 
-export function ResponsiveImage({ src, alt, width, height, sizes, className, priority = false }: ResponsiveImageProps) {
-  const extension = src.lastIndexOf(".");
-  const base = src.slice(0, extension);
-  const ext = src.slice(extension);
-  const srcSet = [480, 768, 1200]
-    .filter((candidate) => candidate < width)
-    .map((candidate) => `${base}-${candidate}${ext} ${candidate}w`)
-    .concat(`${src} ${width}w`)
+export function ResponsiveImage({ src, alt, width, height, sizes, className, priority = false, onError }: ResponsiveImageProps) {
+  const info = imageInfo(src);
+  const actualWidth = info?.width || width;
+  const actualHeight = info?.height || height;
+  const srcSet = (info?.variants || [])
+    .map((variant) => `${imageSource(variant.src, src)} ${variant.width}w`)
+    .concat(`${imageSource(src)} ${actualWidth}w`)
     .join(", ");
 
   return (
@@ -23,16 +25,17 @@ export function ResponsiveImage({ src, alt, width, height, sizes, className, pri
     // binding on every hosting path. These srcsets point to real pre-generated files.
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={src}
+      src={imageSource(src)}
       srcSet={srcSet}
       sizes={sizes}
       alt={alt}
-      width={width}
-      height={height}
+      width={actualWidth}
+      height={actualHeight}
       className={className}
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : "auto"}
       decoding="async"
+      onError={onError}
     />
   );
 }
