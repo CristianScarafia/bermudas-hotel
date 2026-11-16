@@ -20,7 +20,7 @@ export const groupsContent: GroupPageContent = {
 };
 
 export const agenciesContent: GroupPageContent = {
-  path: "/agencias-de-viajes", label: "Agencias y operadores", title: "Tu próxima salida a Mar del Plata empieza con una buena base.", segment: "Agencia de viajes",
+  path: "/agencias-de-viajes", label: "Agencias y operadores", title: "Tu próxima salida a Mar del Plata empieza con una buena base.",
   intro: "Información de alojamiento para agencias de viajes, operadores y coordinadores de contingentes. Conocé Hotel Bermudas y consultá una propuesta según fechas, distribución y tipo de viaje.",
   heading: "La información que necesitás para armar la salida.",
   body: "Una propuesta comercial útil permite saber qué se ofrece, para quién y bajo qué condiciones. Compartinos el programa y la distribución estimada para evaluar el alojamiento del contingente o de sus pasajeros.",
@@ -38,7 +38,7 @@ export const agenciesContent: GroupPageContent = {
 };
 
 export const eventsContent: GroupPageContent = {
-  path: "/alojamiento-para-eventos", label: "Congresos, encuentros y deportes", title: "Venís por el encuentro. Quedate para disfrutar la ciudad.", segment: "Congreso o evento",
+  path: "/alojamiento-para-eventos", label: "Congresos, encuentros y deportes", title: "Venís por el encuentro. Quedate para disfrutar la ciudad.",
   intro: "Alojamiento en Mar del Plata para asistentes a congresos, jornadas, torneos y eventos. Consultá una habitación o una propuesta para participantes, delegaciones y acompañantes.",
   heading: "Tu actividad tiene fecha. Organicemos la estadía.",
   body: "Ya sea que vengas a una reunión profesional o acompañes a una delegación, conocer horarios, sede y cantidad de personas ayuda a elegir habitaciones y planificar el viaje.",
@@ -56,7 +56,7 @@ export const eventsContent: GroupPageContent = {
 };
 
 export const studentContent: GroupPageContent = {
-  path: "/viajes-de-egresados", label: "Viajes educativos y de egresados", title: "Un viaje que se prepara en equipo.", segment: "Viaje educativo o de egresados",
+  path: "/viajes-de-egresados", label: "Viajes educativos y de egresados", title: "Un viaje que se prepara en equipo.",
   intro: "¿Están organizando un viaje educativo o de egresados a Mar del Plata? Contanos cómo se compone el grupo para evaluar la viabilidad y las condiciones de alojamiento en Hotel Bermudas.",
   heading: "Primero, entender qué necesita el grupo.",
   body: "Las necesidades cambian según edades, cantidad de personas, programa y responsables. La consulta permite revisar el encaje del alojamiento antes de avanzar con una propuesta concreta.",

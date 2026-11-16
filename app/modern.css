@@ -105,11 +105,8 @@ button:disabled { cursor: wait; opacity: .65; }
 .check-field { display: flex; align-items: center; gap: 9px; font-size: 11px; color: var(--muted); cursor: pointer; }
 .check-field input { accent-color: var(--ink); width: 17px; height: 17px; }
 .field-error { color: #a12e23; font-weight: 600; font-size: 11px; line-height: 1.5; }
-.inquiry-extra { margin: 20px 0; }
-.inquiry-extra summary { cursor: pointer; font-size: 12px; padding-block: 6px; }
-.inquiry-extra summary > span { color: var(--muted); }
-.inquiry-extra .field { margin-top: 14px; }
 .inquiry-submit { width: 100%; border: 0; }
+.inquiry-fields + .inquiry-submit { margin-top: 20px; }
 .inquiry-footnote { color: var(--muted); text-align: center; font-size: 11px; margin: 15px 0 8px; }
 .inquiry-direct { display: block; text-align: center; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; padding-block: 6px; }
 .inquiry-review { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 20px; }

@@ -9,43 +9,51 @@ test.beforeEach(async ({ page }) => {
 
 function futureDate(days: number) { return new Date(Date.now() + days * 86400000).toISOString().slice(0, 10); }
 
-test("validates dates, preserves the brief and opens a contextual WhatsApp inquiry", async ({ page }) => {
+test("validates dates and opens WhatsApp with the short stay inquiry", async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
   await page.goto("/contacto", { waitUntil: "domcontentloaded" });
   const form = page.locator(".inquiry-form");
   await form.getByRole("button", { name: "Preparar mi consulta" }).click();
   await expect(form.getByText("Elegí una fecha de entrada válida.")).toBeVisible();
-  await form.getByLabel("Entrada", { exact: true }).fill(futureDate(10));
+  const arrival = futureDate(10);
+  const departure = futureDate(13);
+  await form.getByLabel("Entrada", { exact: true }).fill(arrival);
   await form.getByLabel("Salida", { exact: true }).fill(futureDate(9));
   await form.getByRole("button", { name: "Preparar mi consulta" }).click();
   await expect(form.getByText("La salida debe ser posterior a la entrada.")).toBeVisible();
-  await form.getByLabel("Salida", { exact: true }).fill(futureDate(13));
+  await form.getByLabel("Salida", { exact: true }).fill(departure);
   await form.getByRole("combobox", { name: "Huéspedes", exact: true }).selectOption("4");
-  await form.getByRole("combobox", { name: "Habitación", exact: true }).selectOption("cuadruple");
   await form.getByRole("button", { name: "Preparar mi consulta" }).click();
-  await expect(form.locator(".inquiry-review")).toContainText("Huéspedes: 4");
+  const message = [
+    "Hola Hotel Bermudas. Quiero consultar una estadía.",
+    `Entrada: ${arrival.split("-").reverse().join("/")}. Salida: ${departure.split("-").reverse().join("/")}.`,
+    "Huéspedes: 4.",
+  ].join("\n");
+  await expect(form.locator(".inquiry-review pre")).toHaveText(message);
   await form.getByRole("button", { name: "Abrir WhatsApp" }).click();
   const destination = await page.locator("body").getAttribute("data-opened-url");
   const url = new URL(destination!);
   expect(url.origin + url.pathname).toBe("https://wa.me/542236076020");
-  expect(url.searchParams.get("text")).toContain("Habitación: Cuádruple");
+  expect(url.searchParams.get("text")).toBe(message);
   expect(errors).toEqual([]);
 });
 
-test("an agency can prepare a flexible group inquiry without passenger details", async ({ page }) => {
+test("an agency can open WhatsApp with a short group inquiry and flexible dates", async ({ page }) => {
   await page.goto("/agencias-de-viajes", { waitUntil: "domcontentloaded" });
   const form = page.locator(".inquiry-form");
   await form.getByLabel("Fechas flexibles o todavía por definir").check();
   await form.getByLabel("Personas estimadas", { exact: true }).fill("24");
-  await form.getByLabel("Organización", { exact: false }).fill("Agencia de prueba");
   await form.getByRole("button", { name: "Preparar mi consulta" }).click();
-  await expect(form.locator(".inquiry-review")).toContainText("Personas estimadas: 24");
-  await expect(form.locator(".inquiry-review")).toContainText("Fechas: todavía por definir");
+  const message = [
+    "Hola Hotel Bermudas. Quiero consultar alojamiento para un grupo.",
+    "Fechas: todavía por definir.",
+    "Personas estimadas: 24.",
+  ].join("\n");
+  await expect(form.locator(".inquiry-review pre")).toHaveText(message);
   await form.getByRole("button", { name: "Abrir WhatsApp" }).click();
   const url = new URL((await page.locator("body").getAttribute("data-opened-url"))!);
-  expect(url.searchParams.get("text")).toContain("Agencia de prueba");
-  expect(url.searchParams.get("text")).toContain("Tipo de viaje: Agencia de viajes");
+  expect(url.searchParams.get("text")).toBe(message);
 });
 
 test("room gallery supports navigation, Escape and return of focus", async ({ page }) => {
@@ -60,7 +68,7 @@ test("room gallery supports navigation, Escape and return of focus", async ({ pa
   await page.keyboard.press("Escape");
   await expect(dialog).not.toBeVisible();
   await expect(trigger).toBeFocused();
-  await expect(page.locator(".inquiry-form select[name=room]")).toHaveValue("quintuple");
+  await expect(page.locator(".inquiry-form select[name=guests]")).toHaveValue("5");
 });
 
 test("interactive location changes point and perspective with reduced motion", async ({ page }) => {

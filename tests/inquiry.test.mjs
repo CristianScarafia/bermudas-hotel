@@ -2,21 +2,25 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { validateInquiry, inquiryMessage, safeLinkDestination } from "../lib/inquiry.ts";
 
-const valid = { mode: "stay", arrival: "2030-02-10", departure: "2030-02-13", flexible: false, guests: "2", room: "doble", segment: "", organization: "", notes: "" };
+const valid = { mode: "stay", arrival: "2030-02-10", departure: "2030-02-13", flexible: false, guests: "2" };
 
-test("rejects impossible dates, past dates and capacity mismatches", () => {
+test("rejects impossible dates, past dates and invalid guest counts", () => {
   assert.deepEqual(validateInquiry(valid, "2030-02-01"), {});
   assert.ok(validateInquiry({ ...valid, arrival: "2030-02-30" }, "2030-02-01").arrival);
   assert.ok(validateInquiry({ ...valid, arrival: "2030-01-01" }, "2030-02-01").arrival);
   assert.ok(validateInquiry({ ...valid, departure: valid.arrival }, "2030-02-01").departure);
-  assert.ok(validateInquiry({ ...valid, guests: "5" }, "2030-02-01").room);
+  assert.ok(validateInquiry({ ...valid, guests: "6" }, "2030-02-01").guests);
 });
 
 test("allows no dates for flexible groups, but validates partially entered dates", () => {
-  const group = { ...valid, mode: "group", segment: "Agencia de viajes", guests: "24", arrival: "", departure: "", flexible: true };
+  const group = { ...valid, mode: "group", guests: "24", arrival: "", departure: "", flexible: true };
   assert.deepEqual(validateInquiry(group, "2030-02-01"), {});
   assert.ok(validateInquiry({ ...group, arrival: "2030-02-10" }, "2030-02-01").departure);
-  assert.match(inquiryMessage(group), /Personas estimadas: 24/);
+  assert.equal(inquiryMessage(group), [
+    "Hola Hotel Bermudas. Quiero consultar alojamiento para un grupo.",
+    "Fechas: todavía por definir.",
+    "Personas estimadas: 24.",
+  ].join("\n"));
 });
 
 test("analytics destinations remove private inquiry text and contact details", () => {

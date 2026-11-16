@@ -82,7 +82,7 @@ export function RoomDetail({ room }: { room: Room }) {
             event: "view_room",
           })).concat([{ href: "/informacion-del-huesped", eyebrow: "Antes de viajar", title: "Información del huésped", copy: "Reservas, horarios, pagos y condiciones explicados con claridad.", event: "view_guest_information" }])}
         />
-        <section id="consultar-habitacion" className="inquiry-section section container"><div className="inquiry-intro"><p className="section-label">Elegiste tu espacio</p><h2>Ahora, contanos cuándo venís.</h2><p>Consultá esta categoría para tus fechas. La estadía incluye desayuno continental; el equipo confirma configuración de camas, disponibilidad y tarifa total.</p></div><InquiryForm room={room.slug} title={`Consultá la ${room.shortName.toLowerCase()}`} /></section>
+        <section id="consultar-habitacion" className="inquiry-section section container"><div className="inquiry-intro"><p className="section-label">Elegiste tu espacio</p><h2>Ahora, contanos cuándo venís.</h2><p>Indicá tus fechas y cuántos huéspedes viajan. La estadía incluye desayuno continental. El equipo confirma disponibilidad, configuración de camas y tarifa total.</p></div><InquiryForm roomCapacity={room.capacity} /></section>
         <JsonLd data={roomSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={breadcrumbSchema} />

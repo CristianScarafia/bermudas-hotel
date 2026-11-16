@@ -7,7 +7,7 @@ import { Breadcrumbs, FaqSection, JsonLd } from "@/components/content-sections";
 import { rooms, siteUrl, type FaqItem } from "@/lib/hotel-content";
 
 export type GroupPageContent = {
-  path: string; label: string; title: string; intro: string; segment?: string;
+  path: string; label: string; title: string; intro: string;
   heading: string; body: string;
   details: Array<[string, string]>;
   faqs: FaqItem[];
@@ -30,7 +30,7 @@ export function GroupLanding({ content }: { content: GroupPageContent }) {
       ["2", "Evaluamos las opciones", "El equipo revisa disponibilidad, distribución y necesidades para preparar la propuesta de alojamiento."],
       ["3", "Confirmás con información", "Antes de reservar, revisá el total, incluidos, pagos, vigencia de la cotización y condiciones de cambios o cancelación."],
     ].map(([step, title, copy]) => <article className="group-step" key={step}><span>Paso {step}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
-    <section id="consulta-grupal" className="inquiry-section section container"><div className="inquiry-intro"><p className="section-label">Directo con el hotel</p><h2>Contanos qué viaje están armando.</h2><p>Un resumen con los datos del grupo nos ayuda a evaluar la distribución y responder con una propuesta concreta.</p><p className="small-note">La consulta no bloquea habitaciones. Disponibilidad, servicios adicionales y condiciones se confirman con el equipo.</p><a className="text-link" href="tel:+542236076020">También podés llamarnos</a></div><InquiryForm mode="group" segment={content.segment} /></section>
+    <section id="consulta-grupal" className="inquiry-section section container"><div className="inquiry-intro"><p className="section-label">Directo con el hotel</p><h2>Contanos cuántas personas viajan.</h2><p>Indicá las fechas tentativas y el tamaño estimado del grupo para iniciar la consulta por WhatsApp.</p><p className="small-note">La consulta no bloquea habitaciones. Disponibilidad, servicios adicionales y condiciones se confirman con el equipo.</p><a className="text-link" href="tel:+542236076020">También podés llamarnos</a></div><InquiryForm mode="group" /></section>
     <FaqSection faqs={content.faqs} title="Lo que conviene saber al organizar" />
     <section className="section container"><div className="segment-links">{groupLinks.filter(link => link.href !== content.path).map(link => <Link className="segment-link" href={link.href} key={link.href}><h3>{link.title}<SvgIcon name="arrow-up-right" /></h3><p>{link.copy}</p></Link>)}</div></section>
     <JsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", name: content.title, url: `${siteUrl}${content.path}`, about: { "@id": `${siteUrl}/#hotel` } }} />

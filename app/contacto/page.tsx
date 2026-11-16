@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return <><Header overlay/><main id="contenido">
     <PageHero eyebrow="Hablemos" title="Tu estadía empieza acá" copy="Consultá fechas, habitaciones y disponibilidad directamente con nuestro equipo." image="/images/fachada-hotel-bermudas-la-perla.webp" alt="Entrada del Hotel Bermudas en La Perla, Mar del Plata" />
-    <section id="consultar" className="inquiry-section section container"><div className="inquiry-intro"><p className="section-label">Directo con el hotel</p><h2>Empecemos por tus fechas.</h2><p>Prepará tu consulta con cantidad de huéspedes y habitación. Si organizás un grupo o viajás desde una agencia, elegí esa opción para contarnos el viaje.</p><p>Desayuno continental incluido. Check-in desde las 12:00 y check-out hasta las 10:00, con posibilidad de dejar tus bolsos.</p></div><InquiryForm /></section>
+    <section id="consultar" className="inquiry-section section container"><div className="inquiry-intro"><p className="section-label">Directo con el hotel</p><h2>Empecemos por tus fechas.</h2><p>Prepará tu consulta con las fechas y la cantidad de huéspedes. Si organizás un viaje grupal, elegí «Grupo o agencia».</p><p>Desayuno continental incluido. Check-in desde las 12:00 y check-out hasta las 10:00, con posibilidad de dejar tus bolsos.</p></div><InquiryForm /></section>
     <section className="contact-section section container">
       <div className="contact-heading reveal"><p className="eyebrow">Contacto directo</p><h2>Estamos para ayudarte a planificar tu viaje.</h2><p>Para obtener atención personalizada y consultar la mejor opción disponible, comunicate por cualquiera de nuestros canales.</p></div>
       <div className="contact-list">
