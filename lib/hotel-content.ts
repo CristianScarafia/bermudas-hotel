@@ -1,7 +1,8 @@
 import type { IconName } from "@/components/icons";
 
 export const siteUrl = "https://bermudashotel.com";
-export const whatsappBase = "https://wa.me/542236076020";
+export const whatsappNumber = "+54 9 223 607-6020";
+export const whatsappBase = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}`;
 export const hotel = {
   name: "Hotel Bermudas",
   address: "3 de Febrero 2484",

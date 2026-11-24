@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { BookingCta, Breadcrumbs, JsonLd, RelatedLinks } from "@/components/content-sections";
 import { Footer, Header, PageHero, WhatsAppButton } from "@/components/site-shell";
-import { siteUrl } from "@/lib/hotel-content";
+import { siteUrl, whatsappNumber } from "@/lib/hotel-content";
 
 export const metadata: Metadata = {
   title: "Políticas, pagos e información del huésped",
@@ -15,7 +15,7 @@ const information = [
   { number: "03", title: "Confirmación de la reserva", copy: "La reserva queda confirmada cuando el equipo del hotel lo comunica expresamente y envía las condiciones correspondientes. Conservá ese intercambio para tener todos los datos a mano." },
   { number: "04", title: "Ingreso, salida y equipaje", copy: "El check-in es desde las 12:00 y el check-out hasta las 10:00. Podés dejar tus bolsos en el hotel si llegás antes o querés seguir paseando después de la salida. El uso de la habitación fuera de horario se consulta por separado." },
   { number: "05", title: "Cambios y cancelaciones", copy: "La política aplicable puede variar según fecha y modalidad de reserva. Antes de confirmar recibirás las condiciones de cambio, cancelación y devolución correspondientes a tu cotización." },
-  { number: "06", title: "Datos operativos", copy: "Dirección: 3 de Febrero 2484, Mar del Plata. Teléfono y WhatsApp: +54 223 607-6020. Correo: bermudashotel@hotmail.com." },
+  { number: "06", title: "Datos operativos", copy: `Dirección: 3 de Febrero 2484, Mar del Plata. Teléfono: +54 223 607-6020. WhatsApp: ${whatsappNumber}. Correo: bermudashotel@hotmail.com.` },
   { number: "07", title: "Desayuno buffet incluido", copy: "La estadía incluye café, té, mate cocido, chocolate, leche, jugo, yogures, cereales, tostadas, medialunas, manteca, mermeladas y dulce de leche." },
   { number: "08", title: "Si venís en auto", copy: "No contamos con estacionamiento propio. Podés detenerte frente al hotel para bajar bolsos y hacer el ingreso respetando la señalización. Hay estacionamiento en los alrededores y cocheras privadas cercanas; consultá condiciones y disponibilidad al llegar." },
 ];

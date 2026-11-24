@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Footer, Header, Icon, PageHero, WhatsAppButton } from "@/components/site-shell";
 import { SvgIcon } from "@/components/icons";
 import { BookingCta, FaqSection } from "@/components/content-sections";
-import { generalFaqs, hotel, roomAmenities, rooms } from "@/lib/hotel-content";
+import { generalFaqs, hotel, roomAmenities, rooms, whatsappFor } from "@/lib/hotel-content";
 
 export const metadata: Metadata = {
   title: "Habitaciones dobles, triples, cuádruples y quíntuples",
@@ -31,7 +31,7 @@ export default function RoomsPage() {
       <PageHero eyebrow="Descansá a tu manera" title="Habitaciones" copy="Espacios renovados para parejas, familias y grupos de hasta cinco huéspedes." image="/images/habitacion-quintuple-hotel-bermudas.webp" alt="Habitación quíntuple renovada del Hotel Bermudas en Mar del Plata" />
       <section className="room-intro section container reveal">
         <div><p className="eyebrow">{hotel.roomCount} habitaciones</p><h2>Todo lo que necesitás para descansar bien.</h2></div>
-        <div><p>Podés elegir habitaciones dobles, triples, cuádruples o quíntuples. Todas ofrecen las mismas comodidades y baños totalmente renovados, con una propuesta simple, cálida y confortable.</p><a className="text-link" href="https://wa.me/542236076020?text=Hola%2C%20quisiera%20saber%20qué%20habitación%20tienen%20disponible" target="_blank" rel="noreferrer">Consultar la opción ideal <SvgIcon name="arrow-up-right" /></a></div>
+        <div><p>Podés elegir habitaciones dobles, triples, cuádruples o quíntuples. Todas ofrecen las mismas comodidades y baños totalmente renovados, con una propuesta simple, cálida y confortable.</p><a className="text-link" href={whatsappFor("Hola, quisiera saber qué habitación tienen disponible")} target="_blank" rel="noreferrer">Consultar la opción ideal <SvgIcon name="arrow-up-right" /></a></div>
       </section>
       <section className="room-types container" aria-labelledby="room-types-title">
         <div className="section-heading reveal"><div><p className="eyebrow">Elegí tu habitación</p><h2 id="room-types-title">Una opción para cada viaje.</h2></div><p className="section-note">Capacidad máxima orientativa</p></div>
