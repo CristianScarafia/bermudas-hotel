@@ -149,10 +149,9 @@ button:disabled { cursor: wait; opacity: .65; }
 .gallery-thumbnails .gallery-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; min-width: 0; min-height: 48px; }
 .gallery-thumbnails .gallery-photo img { display: block; position: absolute; inset: 0; color: var(--ink); font-size: 10px; }
 .gallery-thumbnails .gallery-photo span { right: 4px; bottom: 4px; padding: 0 5px; }
-.explicit-gallery { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
-.explicit-gallery .gallery-photo { height: 280px; }
-.explicit-gallery .gallery-photo:first-child { grid-row: span 2; height: 576px; }
-.explicit-gallery .gallery-photo:nth-child(4) { grid-column: 1 / -1; height: 340px; }
+.explicit-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.explicit-gallery .gallery-photo { width: 100%; min-width: 0; aspect-ratio: 4 / 3; }
+.explicit-gallery .gallery-photo img { position: absolute; inset: 0; display: block; }
 .gallery-dialog { border: 0; padding: 0; width: min(1200px, 94vw); max-height: 94svh; color: white; background: #0a2328; border-radius: 10px; }
 .gallery-dialog::backdrop { background: #061a20ed; }
 body:has(.gallery-dialog[open]) { overflow: hidden; }
@@ -337,10 +336,6 @@ body:has(.gallery-dialog[open]) { overflow: hidden; }
   .explorer-copy > .button { font-size: 12px; padding-inline: 18px; }
   .room-picker { gap: 7px; width: 100%; }
   .room-picker button { flex: 1; width: auto; }
-  .explicit-gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .explicit-gallery .gallery-photo { height: 155px; }
-  .explicit-gallery .gallery-photo:first-child { grid-column: 1 / -1; grid-row: auto; height: 300px; }
-  .explicit-gallery .gallery-photo:nth-child(4) { height: 230px; }
   .gallery-dialog-inner { padding: 54px 12px 12px; }
   .gallery-controls { gap: 10px; }
   .gallery-controls p { font-size: 10px; }
@@ -452,4 +447,8 @@ body:has(.gallery-dialog[open]) { overflow: hidden; }
   .container { width: 100%; }
   .commercial-sheet { padding: 0; border: 0; }
   a { text-decoration: underline; }
+}
+
+@media (max-width: 600px) {
+  .explicit-gallery { grid-template-columns: minmax(0, 1fr); gap: 12px; }
 }

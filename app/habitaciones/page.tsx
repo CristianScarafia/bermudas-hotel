@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Footer, Header, Icon, PageHero, WhatsAppButton } from "@/components/site-shell";
 import { SvgIcon } from "@/components/icons";
 import { BookingCta, FaqSection } from "@/components/content-sections";
-import { generalFaqs, roomAmenities, rooms } from "@/lib/hotel-content";
+import { generalFaqs, hotel, roomAmenities, rooms } from "@/lib/hotel-content";
 
 export const metadata: Metadata = {
   title: "Habitaciones dobles, triples, cuádruples y quíntuples",
@@ -30,14 +30,14 @@ export default function RoomsPage() {
     <main id="contenido">
       <PageHero eyebrow="Descansá a tu manera" title="Habitaciones" copy="Espacios renovados para parejas, familias y grupos de hasta cinco huéspedes." image="/images/habitacion-quintuple-hotel-bermudas.webp" alt="Habitación quíntuple renovada del Hotel Bermudas en Mar del Plata" />
       <section className="room-intro section container reveal">
-        <div><p className="eyebrow">20 habitaciones</p><h2>Todo lo que necesitás para descansar bien.</h2></div>
+        <div><p className="eyebrow">{hotel.roomCount} habitaciones</p><h2>Todo lo que necesitás para descansar bien.</h2></div>
         <div><p>Podés elegir habitaciones dobles, triples, cuádruples o quíntuples. Todas ofrecen las mismas comodidades y baños totalmente renovados, con una propuesta simple, cálida y confortable.</p><a className="text-link" href="https://wa.me/542236076020?text=Hola%2C%20quisiera%20saber%20qué%20habitación%20tienen%20disponible" target="_blank" rel="noreferrer">Consultar la opción ideal <SvgIcon name="arrow-up-right" /></a></div>
       </section>
       <section className="room-types container" aria-labelledby="room-types-title">
         <div className="section-heading reveal"><div><p className="eyebrow">Elegí tu habitación</p><h2 id="room-types-title">Una opción para cada viaje.</h2></div><p className="section-note">Capacidad máxima orientativa</p></div>
         <div className="room-type-grid">
           {rooms.map((room) => <article className="room-type-card reveal" key={room.slug}>
-            <ResponsiveImage src={room.gallery[0].src} alt={room.imageAlt} width={1800} height={1350} sizes="(max-width: 720px) 100vw, 33vw" />
+            <ResponsiveImage src={room.gallery[0].src} alt={room.imageAlt} width={1800} height={1350} sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 800px) calc((100vw - 64px) / 2), (max-width: 1360px) calc((100vw - 104px) / 2), 628px" />
             <div><span>Hasta {room.capacity} huéspedes</span><h3>{room.shortName}</h3><p>{room.intro}</p><Link href={`/habitaciones/${room.slug}`} data-analytics-event="view_room">Ver detalles <SvgIcon name="arrow-right" /></Link></div>
           </article>)}
         </div>
@@ -48,7 +48,7 @@ export default function RoomsPage() {
       <section className="gallery-section section container">
         <div className="section-heading reveal"><div><p className="eyebrow">Galería</p><h2>Conocé cada detalle.</h2></div><p className="section-note">Imágenes reales del hotel</p></div>
         <div className="photo-grid">
-          {photos.map(([photo, alt, caption], index) => <figure className={`photo-item photo-${index + 1} reveal`} key={photo}><ResponsiveImage src={`/images/${photo}.webp`} alt={alt} width={1800} height={1350} sizes="(max-width: 720px) 100vw, 58vw" /><figcaption>{caption}</figcaption></figure>)}
+          {photos.map(([photo, alt, caption]) => <figure className="photo-item reveal" key={photo}><ResponsiveImage src={`/images/${photo}.webp`} alt={alt} width={1800} height={1350} sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc((100vw - 56px) / 2), (max-width: 960px) calc((100vw - 96px) / 2), (max-width: 1360px) calc((100vw - 124px) / 3), 412px" /><figcaption>{caption}</figcaption></figure>)}
         </div>
       </section>
       <FaqSection faqs={[generalFaqs[1], generalFaqs[2], generalFaqs[3], generalFaqs[4], generalFaqs[5]]} title="Preguntas sobre las habitaciones" />

@@ -7,14 +7,14 @@ export const groupsContent: GroupPageContent = {
   body: "Organizar una estadía compartida empieza por saber dónde duerme cada uno y qué necesita el grupo. En Bermudas podés consultar distintas combinaciones de habitaciones y centralizar la propuesta con el hotel.",
   details: [
     ["Habitaciones de dos a cinco", "Categorías dobles, triples, cuádruples y quíntuples. Esta última ofrece dos ambientes; la configuración de camas y el conjunto de habitaciones se confirman al cotizar."],
-    ["Desayuno para empezar el día", "La estadía incluye desayuno continental. Si necesitan coordinar horarios, comidas o servicios adicionales, incluilo en la consulta para evaluar posibilidades."],
+    ["Desayuno para empezar el día", "La estadía incluye desayuno buffet. Si necesitan coordinar horarios, comidas o servicios adicionales, incluilo en la consulta para evaluar posibilidades."],
     ["La Perla como base", "El hotel está a una cuadra del mar y a tres del centro peatonal. Contanos la sede o actividad del viaje para evaluar los traslados."],
     ["Llegadas y equipaje", "Ingreso desde las 12:00 y salida hasta las 10:00. Podés dejar los bolsos antes o después. El acceso de un micro y su detención se consultan previamente; no hay estacionamiento propio."],
   ],
   faqs: [
     { question: "¿Cuántas personas puede alojar un grupo?", answer: "La capacidad para un contingente depende de las fechas, las habitaciones disponibles y la distribución de camas. Contanos cuántas personas viajan y revisamos una propuesta para el grupo." },
     { question: "¿Podemos consultar desde una agencia?", answer: "Sí. Indicá la agencia, las fechas o salidas previstas y el tamaño del grupo. Las condiciones comerciales se acuerdan con el hotel para la propuesta correspondiente." },
-    { question: "¿Incluyen comidas o traslados?", answer: "La estadía incluye desayuno continental. Otras comidas, traslados o servicios especiales se consultan por separado; no están incluidos automáticamente." },
+    { question: "¿Incluyen comidas o traslados?", answer: "La estadía incluye desayuno buffet. Otras comidas, traslados o servicios especiales se consultan por separado; no están incluidos automáticamente." },
     { question: "¿Se puede consultar por un viaje de egresados?", answer: "Podés consultar su viabilidad. Necesitamos conocer composición, fechas y coordinación para evaluar si el alojamiento se adapta al grupo y acordar las condiciones con el responsable u operador." },
   ],
 };
@@ -49,7 +49,7 @@ export const eventsContent: GroupPageContent = {
     ["Alojamiento para participantes", "La propuesta corresponde a la estadía en el hotel. Inscripciones, entradas, sedes y traslados del evento se coordinan con sus organizadores, salvo acuerdo expreso."],
   ],
   faqs: [
-    { question: "¿Qué servicios podemos cotizar para los participantes?", answer: "Podés consultar habitaciones con desayuno continental para asistentes y acompañantes. Indicá fechas, sede y cantidad de personas. Otros servicios y acuerdos específicos se detallan en la propuesta del hotel." },
+    { question: "¿Qué servicios podemos cotizar para los participantes?", answer: "Podés consultar habitaciones con desayuno buffet para asistentes y acompañantes. Indicá fechas, sede y cantidad de personas. Otros servicios y acuerdos específicos se detallan en la propuesta del hotel." },
     { question: "¿Puedo consultar por una delegación deportiva?", answer: "Sí. Contanos cantidad de personas, fechas, sede y necesidades de distribución u horarios. El equipo evalúa las posibilidades y los servicios a coordinar." },
     { question: "¿El traslado a la sede está incluido?", answer: "No está incluido automáticamente. Revisá la ubicación y coordiná el traslado con el organizador o consultá opciones antes de reservar." },
   ],
@@ -63,7 +63,7 @@ export const studentContent: GroupPageContent = {
   details: [
     ["Coordinación identificada", "La consulta se realiza con el adulto responsable, institución u operador. Informá cantidades estimadas y edades generales cuando sean necesarias para evaluar la propuesta."],
     ["Habitaciones y convivencia", "Revisamos disponibilidad y distribución. Las condiciones de recepción del grupo, acompañamiento y horarios deben quedar definidas antes de confirmar."],
-    ["Qué corresponde al alojamiento", "Habitaciones, desayuno continental y servicios acordados en la cotización. Excursiones, transporte, actividades y organización del viaje no se incluyen automáticamente."],
+    ["Qué corresponde al alojamiento", "Habitaciones, desayuno buffet y servicios acordados en la cotización. Excursiones, transporte, actividades y organización del viaje no se incluyen automáticamente."],
     ["Una propuesta, si el encaje es adecuado", "Cada solicitud se evalúa según la operación del hotel y las características del grupo. Consultar no implica aceptación ni reserva de plazas."],
   ],
   faqs: [

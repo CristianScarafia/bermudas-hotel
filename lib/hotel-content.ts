@@ -10,7 +10,8 @@ export const hotel = {
   email: "bermudashotel@hotmail.com",
   checkIn: "12:00",
   checkOut: "10:00",
-  breakfast: "Desayuno continental incluido",
+  roomCount: 23,
+  breakfast: "Desayuno buffet incluido",
   parking: "El hotel no cuenta con estacionamiento propio. Podés detenerte frente al hotel para bajar equipaje y hacer el ingreso, respetando la señalización. En los alrededores hay estacionamiento en la calle y cocheras privadas; consultá las opciones y condiciones al llegar.",
   luggage: "Podés dejar tus bolsos en el hotel si llegás antes del ingreso o querés aprovechar la ciudad después de la salida.",
 };
@@ -44,7 +45,7 @@ const sharedRoomFaqs: FaqItem[] = [
   },
   {
     question: "¿Qué servicios están incluidos en la habitación?",
-    answer: "La estadía incluye desayuno continental. Las habitaciones tienen baño privado renovado, Wi-Fi, TV, aire acondicionado, sommier, caja de seguridad y placard.",
+    answer: "La estadía incluye desayuno buffet. Las habitaciones tienen baño privado renovado, Wi-Fi, TV, aire acondicionado, sommier, caja de seguridad y placard.",
   },
   {
     question: "¿Cómo consulto disponibilidad y tarifa?",
@@ -164,7 +165,7 @@ export const generalFaqs: FaqItem[] = [
   },
   {
     question: "¿El desayuno está incluido?",
-    answer: "Sí. La estadía incluye desayuno continental con infusiones, leche, jugo, yogures, cereales, tostadas, medialunas, manteca, mermeladas y dulce de leche.",
+    answer: "Sí. La estadía incluye desayuno buffet con infusiones, leche, jugo, yogures, cereales, tostadas, medialunas, manteca, mermeladas y dulce de leche.",
   },
   {
     question: "¿Cómo puedo reservar?",
@@ -180,7 +181,7 @@ export const generalFaqs: FaqItem[] = [
   },
   {
     question: "¿Cuáles son los horarios de ingreso y salida?",
-    answer: "El check-in es desde las 12:00 y el check-out hasta las 10:00. Si llegás antes o querés seguir paseando después de la salida, podés dejar tus bolsos en el hotel. El uso de la habitación fuera de horario se consulta por separado.",
+    answer: "El check-in es desde las 12:00 y el check-out hasta las 10:00. Si llegás antes o querés seguir paseando después de la salida, podés dejar tus bolsos en el hotel. El uso de la habitación fuera de horario se consulta por separado. Si reservaste por un convenio, verificá los horarios en tu confirmación.",
   },
   {
     question: "¿El hotel tiene estacionamiento?",

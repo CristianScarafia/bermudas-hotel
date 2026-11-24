@@ -33,8 +33,8 @@ export function PhotoGallery({ photos, compact = false }: { photos: Photo[]; com
   function move(delta: number) { setSelected(i => (i + delta + photos.length) % photos.length); }
   return <>
     <div ref={thumbnails} className={compact ? "gallery-thumbnails" : "explicit-gallery"} data-ready={hydrated}>
-      {photos.map((photo, index) => <button type="button" className={`gallery-photo gallery-photo-${index + 1}`} key={photo.src} disabled={!hydrated} aria-label={`Ampliar foto: ${photo.alt}`} onClick={event => { trigger.current = event.currentTarget; setSelected(index); setOpened(true); dialog.current?.showModal(); }}>
-        <ResponsiveImage src={photo.src} alt={photo.alt} width={1800} height={1350} sizes={compact ? "(max-width: 480px) 90px, 112px" : "(max-width: 720px) 100vw, 55vw"} onError={event => retryFullSource(event.currentTarget, photo.src)} />
+      {photos.map((photo, index) => <button type="button" className="gallery-photo" key={photo.src} disabled={!hydrated} aria-label={`Ampliar foto: ${photo.alt}`} onClick={event => { trigger.current = event.currentTarget; setSelected(index); setOpened(true); dialog.current?.showModal(); }}>
+        <ResponsiveImage src={photo.src} alt={photo.alt} width={1800} height={1350} sizes={compact ? "(max-width: 480px) 90px, 112px" : "(max-width: 600px) calc(100vw - 48px), (max-width: 1228px) calc((100vw - 64px) / 2), 579px"} onError={event => retryFullSource(event.currentTarget, photo.src)} />
         <span aria-hidden="true">{compact ? "+" : "Ampliar"}</span>
       </button>)}
     </div>

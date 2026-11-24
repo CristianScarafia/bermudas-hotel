@@ -48,3 +48,42 @@ test("a failed thumbnail variant retries the complete photograph", async ({ page
   await expect.poll(() => image.evaluate(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0)).toBe(true);
   expect(await image.evaluate(img => (img as HTMLImageElement).currentSrc)).toMatch(/habitacion-doble-dos-camas-hotel-bermudas\.webp\?v=/);
 });
+
+for (const width of [360, 768, 1440]) {
+  test(`room detail and index photos keep their natural framing at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 960 });
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    const errors: string[] = [];
+    page.on("pageerror", error => errors.push(error.message));
+
+    for (const slug of ["", "/doble", "/triple", "/cuadruple", "/quintuple"]) {
+      await page.goto(`/habitaciones${slug}`, { waitUntil: "domcontentloaded" });
+      const images = page.locator(slug ? ".explicit-gallery img" : ".photo-grid img, .room-type-card > img");
+      expect(await images.count()).toBeGreaterThanOrEqual(3);
+      for (const image of await images.all()) {
+        await image.scrollIntoViewIfNeeded();
+        await expect.poll(() => image.evaluate(el => {
+          const photo = el as HTMLImageElement;
+          const { x, width, height } = photo.getBoundingClientRect();
+          return photo.complete && photo.naturalWidth > 0 && height > 0 &&
+            Math.abs(width / height - photo.naturalWidth / photo.naturalHeight) < 0.02 &&
+            x >= -1 && x + width <= window.innerWidth + 1 &&
+            (window.innerWidth !== 360 || width >= 300);
+        })).toBe(true);
+      }
+      if (slug) {
+        const lastPhoto = page.locator(".explicit-gallery button").last();
+        await lastPhoto.focus();
+        await page.keyboard.press("Enter");
+        const dialog = page.getByRole("dialog");
+        await expect(dialog).toBeVisible();
+        await expect.poll(() => dialog.locator(".gallery-dialog-inner > img").evaluate(el => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+        await page.keyboard.press("ArrowRight");
+        await expect(dialog.locator(".gallery-controls p")).toContainText("1 /");
+        await page.keyboard.press("Escape");
+        await expect(lastPhoto).toBeFocused();
+      }
+    }
+    expect(errors).toEqual([]);
+  });
+}

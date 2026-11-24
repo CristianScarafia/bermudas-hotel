@@ -12,10 +12,10 @@ Fuentes del proyecto: `lib/hotel-content.ts`, `app/layout.tsx`, `components/site
 - Ubicación declarada: 3 de Febrero 2484, barrio La Perla, Mar del Plata, Buenos Aires, Argentina.
 - Sitio canónico configurado: `https://bermudashotel.com`.
 - Contacto publicado: WhatsApp/teléfono `+54 223 607-6020`; correo `bermudashotel@hotmail.com`.
-- Oferta descrita: 20 habitaciones, categorías doble, triple, cuádruple y quíntuple; esta última se presenta con dos ambientes.
+- Oferta comercial confirmada: 23 habitaciones, categorías doble, triple, cuádruple y quíntuple; esta última se presenta con dos ambientes.
 - Equipamiento publicado: baño privado renovado, Wi-Fi, TV HD, climatización, sommier y caja de seguridad. La configuración de camas se confirma según disponibilidad.
 - El sitio declara 100 m al mar y 300 m a la peatonal. Verificar distancias y recorridos antes de extender esas afirmaciones a lugares concretos.
-- El responsable confirmó el 11/11/2026 que la estadía incluye desayuno continental: café, té, mate cocido, chocolate, leche, jugo, agua, yogures de frutilla/vainilla, cereales, tostadas, medialunas, manteca, mermeladas y dulce de leche.
+- El responsable confirmó el 11/11/2026 los incluidos del desayuno, que describió como buffet en el folleto del 19/11/2026: café, té, mate cocido, chocolate, leche, jugo, agua, yogures de frutilla/vainilla, cereales, tostadas, medialunas, manteca, mermeladas y dulce de leche.
 - Públicos presentes en el contenido: parejas, familias, familias numerosas, amigos y grupos/contingentes. No asumir servicios especiales para grupos que no estén confirmados.
 
 ## Objetivo y propuesta

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@/components/analytics";
+import { hotel } from "@/lib/hotel-content";
 import "./globals.css";
 import "./modern.css";
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Hotel Bermudas",
   },
   description:
-    "Hotel en La Perla, Mar del Plata, a una cuadra del mar. Habitaciones renovadas, desayuno continental incluido y consultas directas para familias y grupos.",
+    "Hotel en La Perla, Mar del Plata, a una cuadra del mar. Habitaciones renovadas, desayuno buffet incluido y consultas directas para familias y grupos.",
   keywords: [
     "hotel en Mar del Plata",
     "hotel La Perla",
@@ -83,7 +84,7 @@ const hotelSchema = {
   ],
   description:
     "Hotel familiar en La Perla, Mar del Plata, a 100 metros del mar y a 300 metros de la peatonal.",
-  numberOfRooms: 20,
+  numberOfRooms: hotel.roomCount,
   checkinTime: "12:00",
   checkoutTime: "10:00",
   priceRange: "$$",

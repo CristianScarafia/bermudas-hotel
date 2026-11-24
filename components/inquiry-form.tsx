@@ -76,7 +76,7 @@ export function InquiryForm({ mode = "stay", roomCapacity }: { mode?: "stay" | "
       <button className="copy-brief" type="button" onClick={async () => { try { await navigator.clipboard.writeText(message); setCopied(true); track("inquiry_copy"); } catch { setCopied(false); } }}>Copiar resumen</button><span role="status">{copied ? "Resumen copiado." : ""}</span>
     </div>}
     </fieldset>
-    <p className="inquiry-footnote">Desayuno continental incluido. Disponibilidad y tarifa a confirmar.</p>
+    <p className="inquiry-footnote">Desayuno buffet incluido. Disponibilidad y tarifa a confirmar.</p>
     <noscript><p className="small-note">Podés consultar por WhatsApp con el enlace de abajo o llamar al +54 223 607-6020.</p></noscript>
     <a className="inquiry-direct" href={whatsappFor(group ? "Hola Hotel Bermudas. Quiero consultar alojamiento para un grupo." : "Hola Hotel Bermudas. Quiero consultar una estadía.")} target="_blank" rel="noreferrer" data-cta-location="inquiry_fallback">Prefiero escribir directamente</a>
   </form>;
