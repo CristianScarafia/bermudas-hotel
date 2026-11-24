@@ -97,3 +97,16 @@ test("advertises consistent room count, breakfast and direct-stay hours", async 
   assert.match(faq, /check-in es desde las 12:00 y el check-out hasta las 10:00/);
   assert.match(faq, /Si reservaste por un convenio, verificá los horarios en tu confirmación/);
 });
+
+test("WhatsApp links use the mobile prefix without changing the voice number", async () => {
+  for (const path of routes) {
+    const html = await (await request(path)).text();
+    const links = [...html.matchAll(/href="(https:\/\/wa\.me\/[^"]+)"/g)];
+    assert.ok(links.length > 0, path);
+    for (const [, link] of links) {
+      assert.equal(new URL(link).pathname, "/5492236076020", path);
+    }
+    assert.match(html, /href="tel:\+542236076020"/, path);
+    assert.doesNotMatch(html, /href="tel:\+5492236076020"/, path);
+  }
+});

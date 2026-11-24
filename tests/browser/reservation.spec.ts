@@ -34,7 +34,7 @@ test("validates dates and opens WhatsApp with the short stay inquiry", async ({ 
   await form.getByRole("button", { name: "Abrir WhatsApp" }).click();
   const destination = await page.locator("body").getAttribute("data-opened-url");
   const url = new URL(destination!);
-  expect(url.origin + url.pathname).toBe("https://wa.me/542236076020");
+  expect(url.origin + url.pathname).toBe("https://wa.me/5492236076020");
   expect(url.searchParams.get("text")).toBe(message);
   expect(errors).toEqual([]);
 });

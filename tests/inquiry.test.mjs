@@ -24,7 +24,7 @@ test("allows no dates for flexible groups, but validates partially entered dates
 });
 
 test("analytics destinations remove private inquiry text and contact details", () => {
-  assert.equal(safeLinkDestination("https://wa.me/542236076020?text=Nombre%20y%20fechas#private"), "https://wa.me/542236076020");
+  assert.equal(safeLinkDestination("https://wa.me/5492236076020?text=Nombre%20y%20fechas#private"), "https://wa.me/5492236076020");
   assert.equal(safeLinkDestination("mailto:private@example.com?subject=Name"), "mailto:");
   assert.equal(safeLinkDestination("tel:+54123456789"), "tel:");
 });

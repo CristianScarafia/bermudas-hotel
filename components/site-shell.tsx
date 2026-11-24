@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SvgIcon, type IconName } from "@/components/icons";
 import { ResponsiveImage } from "@/components/responsive-image";
+import { whatsappBase, whatsappFor } from "@/lib/hotel-content";
 import { MobileMenu } from "@/components/mobile-menu";
 
 const nav = [
@@ -41,7 +42,7 @@ export function Footer() {
         <div className="footer-column"><h2>El hotel</h2><Link href="/hotel-en-la-perla">Hotel en La Perla</Link><Link href="/habitaciones">Habitaciones</Link><Link href="/servicios">Servicios</Link><Link href="/ubicacion">Ubicación</Link></div>
         <div className="footer-column"><h2>Alojarse</h2><Link href="/alojamiento-familiar">Familias</Link><Link href="/grupos-y-contingentes">Grupos y contingentes</Link><Link href="/agencias-de-viajes">Agencias de viajes</Link><Link href="/alojamiento-para-eventos">Congresos y eventos</Link><Link href="/informacion-del-huesped">Información del huésped</Link><Link href="/preguntas-frecuentes">Preguntas frecuentes</Link></div>
         <div className="footer-column"><h2>Guías locales</h2><Link href="/guias/la-perla-a-pie">La Perla a pie</Link><Link href="/guias/playas-cerca-del-hotel">Playas cercanas</Link><Link href="/guias/centro-de-mar-del-plata">Centro de Mar del Plata</Link></div>
-        <div className="footer-column"><h2>Contacto</h2><a href="tel:+542236076020">+54 223 607-6020</a><a href="mailto:bermudashotel@hotmail.com">bermudashotel@hotmail.com</a><a href="https://maps.google.com/?q=3+de+Febrero+2484+Mar+del+Plata" target="_blank" rel="noreferrer">3 de Febrero 2484<br />Mar del Plata, Argentina</a><a className="text-link light-link" href="https://wa.me/542236076020" target="_blank" rel="noreferrer">WhatsApp <SvgIcon name="arrow-up-right" /></a></div>
+        <div className="footer-column"><h2>Contacto</h2><a href="tel:+542236076020">+54 223 607-6020</a><a href="mailto:bermudashotel@hotmail.com">bermudashotel@hotmail.com</a><a href="https://maps.google.com/?q=3+de+Febrero+2484+Mar+del+Plata" target="_blank" rel="noreferrer">3 de Febrero 2484<br />Mar del Plata, Argentina</a><a className="text-link light-link" href={whatsappBase} target="_blank" rel="noreferrer">WhatsApp <SvgIcon name="arrow-up-right" /></a></div>
       </div>
       <div className="footer-bottom container"><span>© {new Date().getFullYear()} Hotel Bermudas</span><span>Mar del Plata · Buenos Aires</span></div>
     </footer>
@@ -49,7 +50,7 @@ export function Footer() {
 }
 
 export function WhatsAppButton() {
-  return <div className="contact-dock"><span>¿Te quedó una pregunta?</span><a href="https://wa.me/542236076020?text=Hola%20Hotel%20Bermudas%2C%20quisiera%20consultar%20disponibilidad" target="_blank" rel="noreferrer" data-cta-location="footer_contact"><SvgIcon name="whatsapp" />Hablá con el hotel</a></div>;
+  return <div className="contact-dock"><span>¿Te quedó una pregunta?</span><a href={whatsappFor("Hola Hotel Bermudas, quisiera consultar disponibilidad")} target="_blank" rel="noreferrer" data-cta-location="footer_contact"><SvgIcon name="whatsapp" />Hablá con el hotel</a></div>;
 }
 
 export function Icon({ name }: { name: IconName }) {
