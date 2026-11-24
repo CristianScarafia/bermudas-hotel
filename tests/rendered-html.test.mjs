@@ -79,3 +79,21 @@ test("publishes expanded sitemap and FAQ page", async () => {
   assert.equal(faq.status, 200);
   assert.match(await faq.text(), /"@type":"FAQPage"/);
 });
+
+test("advertises consistent room count, breakfast and direct-stay hours", async () => {
+  const paths = ["/habitaciones", "/ficha-comercial", "/grupos-y-contingentes",
+    "/agencias-de-viajes", "/alojamiento-para-eventos", "/viajes-de-egresados"];
+  for (const path of paths) {
+    const html = await (await request(path)).text();
+    assert.match(html, /23(?:<!-- -->)? habitaciones/, path);
+    assert.match(html, /"numberOfRooms":23/, path);
+    assert.doesNotMatch(html, /20(?:<!-- -->)? habitaciones/, path);
+  }
+  for (const path of routes) {
+    assert.doesNotMatch(await (await request(path)).text(), /desayuno continental/i, path);
+  }
+  const faq = await (await request("/preguntas-frecuentes")).text();
+  assert.match(faq, /desayuno buffet/i);
+  assert.match(faq, /check-in es desde las 12:00 y el check-out hasta las 10:00/);
+  assert.match(faq, /Si reservaste por un convenio, verificá los horarios en tu confirmación/);
+});
